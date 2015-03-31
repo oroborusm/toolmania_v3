@@ -2993,8 +2993,13 @@ table
 				.functional-buttons
 					.compare
 						a
-							background naranjo
-							color white
+							&:before
+								color naranjito
+							span
+								color naranjito
+						.checked
+							&:before
+								color naranjito
 										
 				.left-block
 					position relative
@@ -3023,18 +3028,40 @@ table
 				.compare
 					a
 						background transparent
+						//border 1px solid #999
 						border-radius 5px
 						color oscuro
 						display block
-						font-size 15px
-						line-height 50px
-						margin 0 auto
-						text-align center
+						font-size 11px
+						height 25px
+						margin 5px auto 0
+						text-align left
 						text-decoration none
 						transition .3s
-						width 180px
+						width 185px
 						z-index 3
-						
+						&:before
+							color #bbb
+							//content '\e737'
+							content '\e739'
+							font-family 'icos'
+							font-size 16px
+							line-height 25px
+							position absolute
+						span
+							color #bbb
+							//display none
+							display block
+							font-size 13px
+							line-height 25px
+							margin-left 20px
+					.checked
+						&:before
+							color #bbb
+							content '\e73a'
+							font-family 'icos'
+							font-size 16px
+							line-height 25px
 			.left-block
 				position relative
 				text-align left
@@ -3826,3 +3853,8 @@ table
 			display block
 			font-size 16px !important
 			width 100%
+
+
+td
+	.sale-box
+		display none

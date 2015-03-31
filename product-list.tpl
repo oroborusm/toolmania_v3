@@ -183,7 +183,9 @@
 							
 							{if isset($comparator_max_item) && $comparator_max_item}
 								<div class="compare">
-									<a class="add_to_compare" href="{$product.link|escape:'html':'UTF-8'}" data-id-product="{$product.id_product}">{l s='Add to Compare'}</a>
+									<a class="add_to_compare" href="{$product.link|escape:'html':'UTF-8'}" data-id-product="{$product.id_product}">
+										<span>{l s='Add to Compare'}</span>
+									</a>
 								</div>
 							{/if}
 						</div>
