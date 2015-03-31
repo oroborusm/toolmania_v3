@@ -89,7 +89,7 @@
 						</h2>
 						
 						
-						<div class="button-container añadeCarrituHome">
+						<div class="button-container añadeCarrituHome animated infinite pulse">
 							{if ($product.id_product_attribute == 0 || (isset($add_prod_display) && ($add_prod_display == 1))) && $product.available_for_order && !isset($restricted_country_mode) && $product.minimal_quantity <= 1 && $product.customizable != 2 && !$PS_CATALOG_MODE}
 								{if (!isset($product.customization_required) || !$product.customization_required) && ($product.allow_oosp || $product.quantity > 0)}
 									{if isset($static_token)}

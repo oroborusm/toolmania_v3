@@ -3490,7 +3490,10 @@ display table,
 .listaProducto .listaProductoLi .contenedorPopular .left-block .product-image-container span img {
   -webkit-border-radius: 9px;
   border-radius: 9px;
-  width: 100%;
+  display: block;
+  margin: 0 auto;
+  padding: 5%;
+  width: 90%;
 }
 .listaProducto .listaProductoLi .contenedorPopular .left-block .product-image-container .vistaRapida {
   display: none;
