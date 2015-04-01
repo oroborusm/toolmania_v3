@@ -25,7 +25,7 @@
 {if !isset($content_only) || !$content_only}
 					</div><!-- #center_column -->
 						{if isset($right_column_size) && !empty($right_column_size)}
-							
+
 						{/if}
 					</div><!-- popularesMasVendidos -->
 
@@ -38,8 +38,8 @@
 				</div>
 			</div>
 
-			
-			
+
+
 		<!--</div> esto abre desde el archivo header.tpl#page -->
 
 
@@ -68,14 +68,15 @@
 
 							  <!-- SilverTrack requires only this part -->
 							  <div class="owl-carousel">
-							      <div class="item"><img src="themes/toolmanía_v3-master/img/1.jpg"></div>
-							      <div class="item"><img src="themes/toolmanía_v3-master/img/2.jpg"></div>
-							      <div class="item"><img src="themes/toolmanía_v3-master/img/3.jpg"></div>
-							      <div class="item"><img src="themes/toolmanía_v3-master/img/4.jpg"></div>
-							      <div class="item"><img src="themes/toolmanía_v3-master/img/5.jpg"></div>
-							      <div class="item"><img src="themes/toolmanía_v3-master/img/7.jpg"></div>
+							      <div class="item"><img src="themes/toolmania_v3-master/img/1.jpg"></div>
+							      <div class="item"><img src="themes/toolmania_v3-master/img/2.jpg"></div>
+							      <div class="item"><img src="themes/toolmania_v3-master/img/3.jpg"></div>
+							      <div class="item"><img src="themes/toolmania_v3-master/img/4.jpg"></div>
+							      <div class="item"><img src="themes/toolmania_v3-master/img/5.jpg"></div>
+							      <div class="item"><img src="themes/toolmania_v3-master/img/7.jpg"></div>
+										<div class="item"><img src="themes/toolmania_v3-master/img/8.jpg"></div>
 							  </div>
-							
+
 						</div>
 					{/if}
 
@@ -83,7 +84,7 @@
 
 			{if isset($HOOK_FOOTER)}
 				<!-- Footer -->
-				
+
 				<div class="footer-container">
 					<footer id="footer">
 						<div class="row">{$HOOK_FOOTER}
@@ -92,7 +93,7 @@
 					</footer>
 					<!-- #footer -->
 				</div>
-				
+
 			{/if}
 	</div>
 
@@ -120,9 +121,9 @@
 		        }
 		    }
 		})
-		
+
 	</script>
-    </div>	
+    </div>
 
 
 	</body>
