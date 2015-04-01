@@ -73,7 +73,7 @@
 							      <div class="item"><img src="themes/toolmania_v3/img/3.jpg"></div>
 							      <div class="item"><img src="themes/toolmania_v3/img/4.jpg"></div>
 							      <div class="item"><img src="themes/toolmania_v3/img/5.jpg"></div>
-							      <div class="item"><img src="themes/toolmania_v3/img/6.jpg"></div>
+							      <div class="item"><img src="themes/toolmania_v3/img/7.jpg"></div>
 							  </div>
 							
 						</div>
