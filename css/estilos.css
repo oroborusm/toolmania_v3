@@ -631,34 +631,6 @@ body header .header .carrito .carritoHover .cart-buttons a span:after {
   margin-left: 7px;
   margin-top: 10px;
 }
-body header .header .carrito .carritoHover .capaCarrito {
-  color: #434142;
-}
-body header .header .carrito .carritoHover .capaCarrito h2 {
-  font-size: 0.8em;
-}
-body header .header .carrito .carritoHover .capaCarrito .productoCesta .totalEnvio strong,
-body header .header .carrito .carritoHover .capaCarrito .productoCesta .totalFinal strong,
-body header .header .carrito .carritoHover .capaCarrito .productoCesta .totalProducto strong {
-  font-size: 15px;
-  font-weight: 700;
-  text-align: right;
-  width: 200px;
-}
-body header .header .carrito .carritoHover .capaCarrito .productoCesta .totalEnvio strong,
-body header .header .carrito .carritoHover .capaCarrito .productoCesta .totalFinal strong,
-body header .header .carrito .carritoHover .capaCarrito .productoCesta .totalProducto strong,
-body header .header .carrito .carritoHover .capaCarrito .productoCesta .totalEnvio span,
-body header .header .carrito .carritoHover .capaCarrito .productoCesta .totalFinal span,
-body header .header .carrito .carritoHover .capaCarrito .productoCesta .totalProducto span {
-  display: inline-block;
-}
-body header .header .carrito .carritoHover .capaCarrito .productoCesta .totalEnvio span,
-body header .header .carrito .carritoHover .capaCarrito .productoCesta .totalFinal span,
-body header .header .carrito .carritoHover .capaCarrito .productoCesta .totalProducto span {
-  font-size: 15px;
-  font-weight: 100;
-}
 body header .header .carrito .carritoHover .productoCarrito {
   position: relative;
 }
@@ -2794,9 +2766,17 @@ table tfoot tr td {
   text-align: center;
 }
 .clearfix:before,
-.clearfix:after,
-content " ",
-display table,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.goCarrito {
+  color: #434142;
+  display: block;
+  margin-right: 5px;
+  text-align: right;
+  text-decoration: none;
+}
 .sf-sub-indicator {
   display: none;
 }
@@ -4072,6 +4052,36 @@ display table,
 .ac_results ul li:hover {
   background: #434142;
   color: #f8b302;
+}
+.capaCarrito {
+  background: #fff;
+  color: #434142;
+  position: fixed;
+}
+.capaCarrito h2 {
+  font-size: 0.8em;
+}
+.capaCarrito .productoCesta .totalEnvio strong,
+.capaCarrito .productoCesta .totalFinal strong,
+.capaCarrito .productoCesta .totalProducto strong {
+  font-size: 15px;
+  font-weight: 700;
+  text-align: right;
+  width: 200px;
+}
+.capaCarrito .productoCesta .totalEnvio strong,
+.capaCarrito .productoCesta .totalFinal strong,
+.capaCarrito .productoCesta .totalProducto strong,
+.capaCarrito .productoCesta .totalEnvio span,
+.capaCarrito .productoCesta .totalFinal span,
+.capaCarrito .productoCesta .totalProducto span {
+  display: inline-block;
+}
+.capaCarrito .productoCesta .totalEnvio span,
+.capaCarrito .productoCesta .totalFinal span,
+.capaCarrito .productoCesta .totalProducto span {
+  font-size: 15px;
+  font-weight: 100;
 }
 .contenedorPartners {
   margin: 30px auto;

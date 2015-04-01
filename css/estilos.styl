@@ -528,28 +528,7 @@ body
 									margin-top 10px
 									//position absolute
 									//top 0px
-					.capaCarrito
-						color oscuro
-						h2
-							font-size .8em
-						.productoCesta
-							//overflow hidden
-							.totalEnvio
-							.totalFinal
-							.totalProducto
-								//margin-left 100px
-								strong
-									
-									font-size 15px
-									font-weight 700
-									text-align right
-									width 200px
-								strong
-								span
-									display inline-block
-								span
-									font-size 15px
-									font-weight 100
+					
 					.productoCarrito
 						position relative
 			.carrito > .ajax_cart_quantity
@@ -2385,6 +2364,8 @@ table
 	a
 		font-size 0
 
+
+
 .checkbox
 	a
 		background clarito
@@ -2407,10 +2388,17 @@ table
 	
 
 
-.clearfix:before, .clearfix:after
-  content " "
-  display table
-						
+.clearfix:before
+.clearfix:after
+	content " "
+	display table
+
+.goCarrito
+	color oscuro
+	display block
+	margin-right 5px
+	text-align right
+	text-decoration none					
 
 .sf-sub-indicator
 	display none
@@ -3538,6 +3526,31 @@ table
 			&:hover
 				background oscuro
 				color naranjito
+
+.capaCarrito
+	background white
+	color oscuro
+	position fixed
+	h2
+		font-size .8em
+	.productoCesta
+		//overflow hidden
+		.totalEnvio
+		.totalFinal
+		.totalProducto
+			//margin-left 100px
+			strong
+				
+				font-size 15px
+				font-weight 700
+				text-align right
+				width 200px
+			strong
+			span
+				display inline-block
+			span
+				font-size 15px
+				font-weight 100
 				
 .contenedorPartners
 	margin 30px auto
