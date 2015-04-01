@@ -68,12 +68,12 @@
 
 							  <!-- SilverTrack requires only this part -->
 							  <div class="owl-carousel">
-							      <div class="item"><img src="themes/toolmania_v3/img/1.jpg"></div>
-							      <div class="item"><img src="themes/toolmania_v3/img/2.jpg"></div>
-							      <div class="item"><img src="themes/toolmania_v3/img/3.jpg"></div>
-							      <div class="item"><img src="themes/toolmania_v3/img/4.jpg"></div>
-							      <div class="item"><img src="themes/toolmania_v3/img/5.jpg"></div>
-							      <div class="item"><img src="themes/toolmania_v3/img/7.jpg"></div>
+							      <div class="item"><img src="themes/toolmanía_v3-master/img/1.jpg"></div>
+							      <div class="item"><img src="themes/toolmanía_v3-master/img/2.jpg"></div>
+							      <div class="item"><img src="themes/toolmanía_v3-master/img/3.jpg"></div>
+							      <div class="item"><img src="themes/toolmanía_v3-master/img/4.jpg"></div>
+							      <div class="item"><img src="themes/toolmanía_v3-master/img/5.jpg"></div>
+							      <div class="item"><img src="themes/toolmanía_v3-master/img/7.jpg"></div>
 							  </div>
 							
 						</div>
