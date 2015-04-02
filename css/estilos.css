@@ -4085,6 +4085,7 @@ table tfoot tr td {
 }
 .carritoAlert {
   background: #f8b302;
+  border: 1px solid transparent;
   -webkit-border-radius: 5px;
   border-radius: 5px;
   display: none;
