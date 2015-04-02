@@ -10,11 +10,9 @@ $(function(){
 		height: '275px'
 	});
 
-	$(function(){
-		interval = setInterval(callFunc, 7000);
+	$('.añadeCarrituHome').on('click', function(){
+		setTimeout(function() {
+			$('.cross').trigger('click');
+		}, 5000);
 	});
-
-	function callFunc(){
-		$('.cross').trigger('click');
-	}
 });
