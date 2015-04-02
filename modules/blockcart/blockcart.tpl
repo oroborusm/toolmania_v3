@@ -23,13 +23,12 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 <!-- MODULE Block cart -->
-<div class="carritoAlert">
-
+	{counter name=active_overlay assign=active_overlay}
 	{if !$PS_CATALOG_MODE && $active_overlay == 1}
-		<div id="layer_cart">
+		<div id="layer_cart" class="carritoAlert">
 			<div class="clearfix">
 				<div class="layer_cart_product col-xs-12 col-md-6">
-					<span class="cross" title="{l s='Close window' mod='blockcart'}"></span>
+					<span class="cross" title="{l s='Close window' mod='blockcart'}">X</span>
 					<h2>
 						<i class="icon-ok"></i>{l s='Product successfully added to your shopping cart' mod='blockcart'}
 					</h2>
@@ -59,7 +58,7 @@
 							{l s='There is 1 item in your cart.' mod='blockcart'}
 						</span>
 					</h2>
-		
+
 					<div class="layer_cart_row">
 						<strong class="dark">
 							{l s='Total products' mod='blockcart'}
@@ -77,7 +76,7 @@
 							{/if}
 						</span>
 					</div>
-		
+
 					{if $show_wrapping}
 						<div class="layer_cart_row">
 							<strong class="dark">
@@ -117,7 +116,7 @@
 							<span class="price cart_block_tax_cost ajax_cart_tax_cost">{$tax_cost}</span>
 						</div>
 					{/if}
-					<div class="layer_cart_row">	
+					<div class="layer_cart_row">
 						<strong class="dark">
 							{l s='Total' mod='blockcart'}
 							{if $display_tax_label}
@@ -138,7 +137,7 @@
 							{/if}
 						</span>
 					</div>
-					<div class="button-container">	
+					<div class="button-container">
 						<span class="continue btn btn-default button exclusive-medium" title="{l s='Continue shopping' mod='blockcart'}">
 							<span>
 								<i class="icon-chevron-left left"></i>{l s='Continue shopping' mod='blockcart'}
@@ -148,7 +147,7 @@
 							<span>
 								{l s='Proceed to checkout' mod='blockcart'}<i class="icon-chevron-right right"></i>
 							</span>
-						</a>	
+						</a>
 					</div>
 				</div>
 			</div>
@@ -156,7 +155,6 @@
 		</div> <!-- #layer_cart -->
 		<div class="layer_cart_overlay"></div>
 	{/if}
-</div>
 
 {if isset($blockcart_top) && $blockcart_top}
 <div class="carrito clearfix{if $PS_CATALOG_MODE} header_user_catalog{/if}">
@@ -165,7 +163,7 @@
 {/if}
 	<div class="carritoHover">
 		<div class="carritoDeCompra shopping_cart">
-			
+
 			<div class="topCarrito">
 				<h3>
 					<span class="ajax_cart_quantity{if $cart_qties == 0} unvisible{/if}">{$cart_qties}</span>
@@ -198,7 +196,7 @@
 					</span> -->
 				</h3>
 			</div>
-			
+
 
 			<!-- esto estaba en  productoCesta -->
 
@@ -215,9 +213,9 @@
 										{assign var='productAttributeId' value=$product.id_product_attribute}
 										<dt data-id="cart_block_product_{$product.id_product}_{if $product.id_product_attribute}{$product.id_product_attribute}{else}0{/if}_{if $product.id_address_delivery}{$product.id_address_delivery}{else}0{/if}" class="{if $smarty.foreach.myLoop.first}first_item{elseif $smarty.foreach.myLoop.last}last_item{else}item{/if}">
 
-											
-											
-											
+
+
+
 
 
 
@@ -225,8 +223,8 @@
 
 											<a class="cart-images" href="{$link->getProductLink($product.id_product, $product.link_rewrite, $product.category)|escape:'html':'UTF-8'}" title="{$product.name|escape:'html':'UTF-8'}"><img src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'cart_default')}" alt="{$product.name|escape:'html':'UTF-8'}" /></a>
 
-											
-											
+
+
 
 
 											<div class="cart-info">
@@ -238,9 +236,9 @@
 														<div class="nombreProducto">
 															<a class="cart_block_product_name" href="{$link->getProductLink($product, $product.link_rewrite, $product.category, null, null, $product.id_shop, $product.id_product_attribute)|escape:'html':'UTF-8'}" title="{$product.name|escape:'html':'UTF-8'}">{$product.name|truncate:13:'...'|escape:'html':'UTF-8'}</a>
 														</div>
-														
+
 													</div>
-													
+
 													<span class="price">
 														{if !isset($product.is_gift) || !$product.is_gift}
 															{if $priceDisplay == $smarty.const.PS_TAX_EXC}{displayWtPrice p="`$product.total`"}{else}{displayWtPrice p="`$product.total_wt`"}{/if}
@@ -275,7 +273,7 @@
 
 
 										</dt>
-										
+
 										{if isset($product.attributes_small)}
 											<dd data-id="cart_block_combination_of_{$product.id_product}{if $product.id_product_attribute}_{$product.id_product_attribute}{/if}_{$product.id_address_delivery|intval}" class="{if $smarty.foreach.myLoop.first}first_item{elseif $smarty.foreach.myLoop.last}last_item{else}item{/if}">
 										{/if}
@@ -421,7 +419,7 @@
 			</div>
 			{/if}
 			{counter name=active_overlay assign=active_overlay}
-			
+
 			{strip}
 			{addJsDef CUSTOMIZE_TEXTFIELD=$CUSTOMIZE_TEXTFIELD}
 			{addJsDef img_dir=$img_dir|escape:'quotes':'UTF-8'}
@@ -446,4 +444,3 @@
 
 	</div><!-- cierra hover de la wea -->
 </div>
-		

@@ -4083,6 +4083,12 @@ table tfoot tr td {
   font-size: 15px;
   font-weight: 100;
 }
+.carritoAlert {
+  background: #f8b302;
+  display: none;
+  position: fixed;
+  z-index: 100;
+}
 .contenedorPartners {
   margin: 30px auto;
   overflow: hidden;
