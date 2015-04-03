@@ -776,7 +776,7 @@ body header .telefono {
   border-radius: 50%;
   height: 30px;
   left: 50%;
-  margin-left: 250px;
+  margin-left: 270px;
   position: absolute;
   top: 10px;
   width: 30px;
@@ -798,7 +798,7 @@ body header .telefonoContenedor {
   border-radius: 5px;
   display: none;
   left: 50%;
-  margin-left: 205px;
+  margin-left: 225px;
   padding: 10px;
   position: absolute;
   text-align: center;
