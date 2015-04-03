@@ -650,6 +650,63 @@ body
 							display block
 							font-size 11px
 							line-height 55px
+		.telefono
+			background white
+			border 3px solid naranjito
+			border-radius 50%
+			height 30px
+			left 50%
+			margin-left 250px
+			position absolute
+			top 10px
+			width 30px
+			&:after
+				color naranjito
+				content	'\e63c'
+				font-family 'icos'
+				font-size 18px
+				display block
+				line-height 30px
+				text-align center
+				width 30px
+
+		.telefonoContenedor
+			background #fff
+			border 3px solid #f8b302
+			border-radius 5px
+			display none
+			left 50%
+			margin-left 205px
+			padding 10px
+			position absolute
+			text-align center
+			top 55px
+			width 100px
+			&:after
+				border-bottom 8px solid white
+				border-left 8px solid transparent
+				border-right 8px solid transparent
+				border-top 8px solid transparent
+				bottom 43px
+				content ''
+				position absolute
+				left 50%
+				margin-left -8px
+			&:before
+				border-bottom 10px solid naranjito
+				border-left 10px solid transparent
+				border-right 10px solid transparent
+				border-top 10px solid transparent
+				bottom 45px
+				content ''
+				position absolute
+				left 50%
+				margin-left -10px
+			&:hover
+				display block
+			span
+				color naranjito
+				font-size 14px
 	ul
 		.first-in-line
 			display inline-block
@@ -3289,8 +3346,6 @@ table
 	font-weight 600
 	line-height normal
 	//margin-top 25px
-
-
 .breadcrumb
 	.home
 		text-decoration none !important
@@ -3916,6 +3971,9 @@ table
 			display block
 			font-size 16px !important
 			width 100%
+
+.telefono:hover ~ .telefonoContenedor
+	display block
 
 
 td

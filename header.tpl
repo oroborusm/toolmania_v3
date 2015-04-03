@@ -40,8 +40,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="generator" content="PrestaShop" />
 		<meta name="robots" content="{if isset($nobots)}no{/if}index,{if isset($nofollow) && $nofollow}no{/if}follow" />
-		
-		<meta name="apple-mobile-web-app-capable" content="yes" /> 
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<link rel="icon" type="image/vnd.microsoft.icon" href="{$favicon_url}?{$img_update_time}" />
 		<link rel="shortcut icon" type="image/x-icon" href="{$favicon_url}?{$img_update_time}" />
 
@@ -55,7 +55,7 @@
 		<link rel="stylesheet" href="{$css_dir}fancybox.css">
 
 
-		
+
 {if isset($js_defer) && !$js_defer && isset($js_files) && isset($js_def)}
 	{$js_def}
 	{foreach from=$js_files item=js_uri}
@@ -64,14 +64,14 @@
 {/if}
 	<script type="text/javascript" src="{$js_dir}modernizr.custom.js"></script>
 	<script type="text/javascript" src="{$js_dir}miscript.js"></script>
-	
+
 	<script type="text/javascript" src="{$js_dir}carrusel.js"></script>
 	<script type="text/javascript" src="{$js_dir}slimscroll.min.js"></script>
 	<script type="text/javascript" src="{$js_dir}owl.carousel.min.js"></script>
 
-	
 
-	
+
+
 		{$HOOK_HEADER}
 
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'>
@@ -80,9 +80,9 @@
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 		<![endif]-->
 
-		
 
-		
+
+
 	</head>
 	<body{if isset($page_name)} id="{$page_name|escape:'html':'UTF-8'}"{/if} class="{if isset($page_name)}{$page_name|escape:'html':'UTF-8'}{/if}{if isset($body_classes) && $body_classes|@count} {implode value=$body_classes separator=' '}{/if}{if $hide_left_column} hide-left-column{/if}{if $hide_right_column} hide-right-column{/if}{if isset($content_only) && $content_only} content_only{/if} lang_{$lang_iso}">
 	{if !isset($content_only) || !$content_only}
@@ -95,24 +95,19 @@
 		<header>
 			<div class="header">
 				<figure>
-
 					<a href="{$base_dir}" title="{$shop_name|escape:'html':'UTF-8'}">
-						
 						<img src="{$logo_url}" alt="{$shop_name|escape:'html':'UTF-8'}"/>
 					</a>
-					
 				</figure>
 				<div class="headerCOnt">
-					
 					{if isset($HOOK_TOP)}{$HOOK_TOP}{hook h="displayNav"}{/if}
 				</div>
-					
-				
-					
-				
 			</div>
-
-
+			<div class="telefono animated tada">
+			</div>
+			<div class="telefonoContenedor">
+				<span>987654321</span>
+			</div>
 		</header>
 
 		<div id="page">
@@ -122,5 +117,5 @@
 						{include file="$tpl_dir./breadcrumb.tpl"}
 					{/if}
 
-					
+
 	{/if}

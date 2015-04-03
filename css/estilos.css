@@ -769,6 +769,71 @@ body header .header .loginUsuario .contenedorLogin .nombre span {
   font-size: 11px;
   line-height: 55px;
 }
+body header .telefono {
+  background: #fff;
+  border: 3px solid #f8b302;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  height: 30px;
+  left: 50%;
+  margin-left: 250px;
+  position: absolute;
+  top: 10px;
+  width: 30px;
+}
+body header .telefono:after {
+  color: #f8b302;
+  content: '\e63c';
+  font-family: 'icos';
+  font-size: 18px;
+  display: block;
+  line-height: 30px;
+  text-align: center;
+  width: 30px;
+}
+body header .telefonoContenedor {
+  background: #fff;
+  border: 3px solid #f8b302;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  display: none;
+  left: 50%;
+  margin-left: 205px;
+  padding: 10px;
+  position: absolute;
+  text-align: center;
+  top: 55px;
+  width: 100px;
+}
+body header .telefonoContenedor:after {
+  border-bottom: 8px solid #fff;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid transparent;
+  bottom: 43px;
+  content: '';
+  position: absolute;
+  left: 50%;
+  margin-left: -8px;
+}
+body header .telefonoContenedor:before {
+  border-bottom: 10px solid #f8b302;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid transparent;
+  bottom: 45px;
+  content: '';
+  position: absolute;
+  left: 50%;
+  margin-left: -10px;
+}
+body header .telefonoContenedor:hover {
+  display: block;
+}
+body header .telefonoContenedor span {
+  color: #f8b302;
+  font-size: 14px;
+}
 body ul .first-in-line {
   display: inline-block;
   width: 24%;
@@ -4541,6 +4606,9 @@ table tfoot tr td {
   display: block;
   font-size: 16px !important;
   width: 100%;
+}
+.telefono:hover ~ .telefonoContenedor {
+  display: block;
 }
 td .sale-box {
   display: none;

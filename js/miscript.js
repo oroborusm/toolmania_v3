@@ -15,4 +15,8 @@ $(function(){
 			$('.cross').trigger('click');
 		}, 5000);
 	});
+
+	setInterval(function() {
+		$('.telefono').toggleClass('tada');
+	}, 4000);
 });
