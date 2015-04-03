@@ -3566,9 +3566,27 @@ table
 	top 5px !important
 	width 220px
 	z-index 100001
+
 	h2
 		font-size 13px
 		text-align left
+	.cross
+		background white
+		border-radius 50%
+		bottom -10px
+		cursor pointer
+		height 30px
+		position absolute
+		right -10px
+		width 30px
+		&:after
+			content '\e6fa'
+			font-family 'icos'
+		  font-size 16px
+			display block
+		  line-height 30px
+		  text-align center
+		  width 30px
 	.layer_cart_img
 		width 30%
 		img

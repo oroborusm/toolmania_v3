@@ -4103,6 +4103,27 @@ table tfoot tr td {
   font-size: 13px;
   text-align: left;
 }
+.carritoAlert .cross {
+  background: #fff;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  bottom: -10px;
+  cursor: pointer;
+  height: 30px;
+  position: absolute;
+  right: -10px;
+  width: 30px;
+  line-height: 30px;
+  text-align: center;
+  width: 30px;
+}
+.carritoAlert .cross:after {
+  content: '\e6fa';
+  font-family: 'icos';
+}
+.carritoAlert .cross font-size 16px {
+  display: block;
+}
 .carritoAlert .layer_cart_img {
   width: 30%;
 }
