@@ -92,6 +92,26 @@
 			</div>
 		{/if}
 
+		{if $logged}
+		  <div class="cupon" style="display:none;">
+		  </div>
+		{else}
+			{if $page_name == 'authentication'}
+				<div class="cupon" style="display:none;">
+				</div>
+			{else}
+			  <div class="cupon">
+			    <div class="avisoCupon">
+			      <p>Si te logeas hay cupon de descuento washo</p>
+			      <a class="login" href="{$link->getPageLink('my-account', true)|escape:'html':'UTF-8'}" rel="nofollow" title="{l s='Log in to your customer account' mod='blockuserinfo'}">
+							<span>click para cupon</span>
+						</a>
+						<div class="noquieroCupon">X</div>
+			    </div>
+			  </div>
+			{/if}
+		{/if}
+
 		<header>
 			<div class="header">
 				<figure>

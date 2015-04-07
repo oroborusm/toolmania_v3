@@ -654,9 +654,11 @@ body header .header .loginUsuario {
 }
 body header .header .loginUsuario .contenedorLogin {
   height: 50px;
-  overflow: hidden;
   position: relative;
   width: 100%;
+}
+body header .header .loginUsuario .contenedorLogin:hover .accedeCuenta {
+  display: block;
 }
 body header .header .loginUsuario .contenedorLogin:hover .account {
   left: 0;
@@ -715,7 +717,7 @@ body header .header .loginUsuario .contenedorLogin .account .texto {
 body header .header .loginUsuario .contenedorLogin .login {
   color: #434142;
   display: block;
-  font-size: 15px;
+  font-size: 13px;
   line-height: 50px;
 }
 body header .header .loginUsuario .contenedorLogin .logout {
@@ -855,49 +857,8 @@ body .autenticacion h1 {
 }
 body .autenticacion .contenedorLogin {
   margin: 0 auto;
+  text-align: center;
 }
-body .autenticacion .contenedorLogin .accedeCuenta {
-  margin-left: 8%;
-}
-body .autenticacion .contenedorLogin .accedeCuenta form .form_content .form-group label {
-  font-size: 15px;
-}
-body .autenticacion .contenedorLogin .accedeCuenta form .form_content .form-group input {
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  display: block;
-  width: 100%;
-}
-body .autenticacion .contenedorLogin .accedeCuenta form .form_content .lost_password {
-  font-size: 15px;
-  margin: 0;
-}
-body .autenticacion .contenedorLogin .accedeCuenta form .form_content .lost_password a {
-  color: #434142;
-  text-decoration: none;
-}
-body .autenticacion .contenedorLogin .accedeCuenta form .form_content .lost_password a:hover {
-  text-decoration: underline;
-}
-body .autenticacion .contenedorLogin .accedeCuenta form .form_content .submit {
-  margin-top: 22px;
-}
-body .autenticacion .contenedorLogin .accedeCuenta form .form_content .submit button {
-  background: #099;
-  border: none;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  color: #fff;
-  width: 100%;
-}
-body .autenticacion .contenedorLogin .accedeCuenta form .form_content .submit button span {
-  line-height: 40px;
-}
-body .autenticacion .contenedorLogin .accedeCuenta form .form_content .submit input {
-  display: block;
-  width: 100%;
-}
-body .autenticacion .contenedorLogin .accedeCuenta,
 body .autenticacion .contenedorLogin .creaCuenta {
   border: 1px solid #ecedef;
   -webkit-border-radius: 4px;
@@ -905,16 +866,14 @@ body .autenticacion .contenedorLogin .creaCuenta {
   display: inline-block;
   padding: 1em;
   vertical-align: top;
-  width: 40%;
+  width: 70%;
 }
-body .autenticacion .contenedorLogin .accedeCuenta form h3,
-body .autenticacion .contenedorLogin .creaCuenta form h3 {
+body .autenticacion .contenedorLogin .creaCuenta form h1 {
   border-bottom: 1px solid #ecedef;
   display: block;
   line-height: 40px;
   margin: 0 0 1em 0;
 }
-body .autenticacion .contenedorLogin .accedeCuenta form .form_content p,
 body .autenticacion .contenedorLogin .creaCuenta form .form_content p {
   color: #434142;
   margin: 0;
@@ -4612,4 +4571,72 @@ table tfoot tr td {
 }
 td .sale-box {
   display: none;
+}
+.accedeCuenta {
+  background: #fff;
+  border: 2px solid #ecedef;
+  display: none;
+  margin-left: -100px;
+  position: relative;
+  z-index: 1;
+}
+.accedeCuenta form .form_content .form-group label {
+  font-size: 15px;
+}
+.accedeCuenta form .form_content .form-group input {
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+}
+.accedeCuenta form .form_content .creaCuenta {
+  color: #434142;
+  font-size: 13px;
+  margin: 0;
+  text-decoration: none;
+}
+.accedeCuenta form .form_content .creaCuenta:hover {
+  text-decoration: underline;
+}
+.accedeCuenta form .form_content .lost_password {
+  font-size: 13px;
+  margin: 0;
+}
+.accedeCuenta form .form_content .lost_password a {
+  color: #434142;
+  text-decoration: none;
+}
+.accedeCuenta form .form_content .lost_password a:hover {
+  text-decoration: underline;
+}
+.accedeCuenta form .form_content .submit {
+  margin: 22px 0 0 0;
+}
+.accedeCuenta form .form_content .submit button {
+  background: #099;
+  border: none;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  color: #fff;
+  width: 100%;
+}
+.accedeCuenta form .form_content .submit button span {
+  line-height: 40px;
+}
+.accedeCuenta form .form_content .submit input {
+  display: block;
+  width: 100%;
+}
+.cupon {
+  background: rgba(67,65,66,0.5);
+  height: 100%;
+  position: fixed;
+  visibility: hidden;
+  width: 100%;
+  z-index: 10000;
+}
+.cupon .avisoCupon {
+  background: #fff;
+  margin: 0 auto;
+  width: 500px;
 }

@@ -113,7 +113,7 @@
 				</p>
 
 				<h1 itemprop="name">{$product->name|escape:'html':'UTF-8'}</h1>
-				
+
 				{if $product->condition}
 				<p id="product_condition" class="condicion">
 					<label>{l s='Condition'} </label>
@@ -197,7 +197,7 @@
 			</div>
 
 
-			
+
 
 
 
@@ -205,7 +205,7 @@
 
 			<div class="carroDecripcion">
 				<div class="rodeacarroDecripcion">
-						
+
 					{if ($product->show_price && !isset($restricted_country_mode)) || isset($groups) || $product->reference || (isset($HOOK_PRODUCT_ACTIONS) && $HOOK_PRODUCT_ACTIONS)}
 					<!-- add to cart form-->
 					<form id="buy_block"{if $PS_CATALOG_MODE && !isset($groups) && $product->quantity > 0} class="hidden"{/if} action="{$link->getPageLink('cart')|escape:'html':'UTF-8'}" method="post">
@@ -280,11 +280,11 @@
 							</div> <!-- end content_prices -->
 							<div class="cantidad">
 								<!-- quantity wanted -->
-								
+
 								{if !$PS_CATALOG_MODE}
 								<p id="quantity_wanted_p" class="contieneCantidad"{if (!$allow_oosp && $product->quantity <= 0) || !$product->available_for_order || $PS_CATALOG_MODE} style="display: none;"{/if}>
 									<label>{l s='Quantity'}</label>
-									
+
 									<input type="text" name="qty" id="quantity_wanted" class="text" value="{if isset($quantityBackup)}{$quantityBackup|intval}{else}{if $product->minimal_quantity > 1}{$product->minimal_quantity}{else}1{/if}{/if}" />
 
 										<!-- <div class="updown"> -->
@@ -295,14 +295,14 @@
 											<a href="#" data-field-qty="qty" class="product_quantity_down">
 												<span><i class="icon-minus"></i></span>
 											</a>
-											
+
 										<!-- </div> -->
-									
+
 									<!-- <span class="clearfix"></span> -->
 								</p>
 								{/if}
 
-								
+
 
 
 
@@ -437,10 +437,10 @@
 
 
 
-			
 
-			
-			
+
+
+
 
 
 
@@ -452,8 +452,8 @@
 		</div> <!-- end pb-left-column -->
 		<!-- end left infos-->
 		<!-- center infos -->
-		
-			
+
+
 	</div> <!-- end primary_block -->
 	{if !$content_only}
 {if (isset($quantity_discounts) && count($quantity_discounts) > 0)}
@@ -514,13 +514,13 @@
 			<!-- Data sheet -->
 			<section class="fichaTecnica">
 				<div class="homeTab one">
-					
+
 					<div class="main">
-						<div><h3 class="page-product-heading">{l s='Data sheet'}</h3></div>   
+						<div><h3 class="page-product-heading">{l s='Data sheet'}</h3></div>
 					</div>
-					
+
 				</div>
-				
+
 				<table class="table-data-sheet">
 					{foreach from=$features item=feature}
 					<tr class="{cycle values="odd,even"}">
@@ -539,12 +539,12 @@
 			<section class="page-product-box reseñaInfo">
 
 				<div class="homeTab one">
-					
+
 
 					<div class="main">
-						<div><h3 class="page-product-heading">{l s='More info'}</h3></div>   
+						<div><h3 class="page-product-heading">{l s='More info'}</h3></div>
 					</div>
-					
+
 				</div>
 		{/if}
 		{if isset($product) && $product->description}
@@ -558,12 +558,12 @@
 			<div class="homeTab one">
 
 				<div class="main">
-					<div>{$HOOK_PRODUCT_TAB}</div>   
+					<div>{$HOOK_PRODUCT_TAB}</div>
 				</div>
-				
+
 			</div>
 
-			
+
 			{if isset($HOOK_PRODUCT_TAB_CONTENT) && $HOOK_PRODUCT_TAB_CONTENT}{$HOOK_PRODUCT_TAB_CONTENT}{/if}
 		</section>
 		<!--end HOOK_PRODUCT_TAB -->
@@ -571,11 +571,11 @@
 			<!--Accessories -->
 			<section class="page-product-box accesorios">
 				<div class="homeTab one">
-					
+
 					<div class="main">
 						<div><h3 class="page-product-heading">{l s='Accessories'}</h3></div>
 					</div>
-					
+
 				</div>
 				<div class="block_content">
 					<ul class="listaProducto bxslider clearfix">

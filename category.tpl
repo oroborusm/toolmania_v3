@@ -23,14 +23,14 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 <div class="contenedorCategoria">
-    
+
     {include file="$tpl_dir./errors.tpl"}
     {if isset($category)}
     	{if $category->id AND $category->active}
         	{if $scenes || $category->description || $category->id_image}
     			<div class="content_scene_cat">
                     <div class="contContent_scene">
-                        
+
                     </div>
                 	{if $scenes}
                      	<div class="content_scene">

@@ -30,7 +30,7 @@
 				<span class="navigation-pipe">{$navigationPipe}</span>{l s='Create your account'}
 			{/if}
 		{/capture}
-		<h1 class="page-heading">{if !isset($email_create)}{l s='Authentication'}{else}{l s='Create an account'}{/if}</h1>
+		<!-- <h1 class="page-heading">{if !isset($email_create)}{l s='Authentication'}{else}{l s='Create an account'}{/if}</h1> -->
 		{if isset($back) && preg_match("/^http/", $back)}{assign var='current_step' value='login'}{include file="$tpl_dir./order-steps.tpl"}{/if}
 		{include file="$tpl_dir./errors.tpl"}
 		{assign var='stateExist' value=false}
@@ -52,11 +52,11 @@
 			</div>
 			{/if}-->
 
-		
+
 			<div class="contenedorLogin">
 				<div class="creaCuenta">
 					<form action="{$link->getPageLink('authentication', true)|escape:'html':'UTF-8'}" method="post" id="create-account_form" class="box">
-						<h3 class="page-subheading">{l s='Create an account'}</h3>
+						<h1 class="page-subheading">{l s='Create an account'}</h1>
 						<div class="form_content">
 							<p>{l s='Please enter your email address to create an account.'}</p>
 							<div class="alerta" id="create_account_error" style="display:none"></div>
@@ -77,7 +77,7 @@
 						</div>
 					</form>
 				</div>
-				<div class="accedeCuenta">
+				<!-- <div class="accedeCuenta">
 					<form action="{$link->getPageLink('authentication', true)|escape:'html':'UTF-8'}" method="post" id="login_form" class="box">
 						<h3 class="page-subheading">{l s='Already registered?'}</h3>
 						<div class="form_content">
@@ -89,7 +89,7 @@
 								<label for="passwd">{l s='Password'}</label>
 								<span><input class="is_required validate account_input form-control" type="password" data-validate="isPasswd" id="passwd" name="passwd" value="{if isset($smarty.post.passwd)}{$smarty.post.passwd|stripslashes}{/if}" /></span>
 							</div>
-							
+
 							<p class="submit">
 								{if isset($back)}<input type="hidden" class="hidden" name="back" value="{$back|escape:'html':'UTF-8'}" />{/if}
 								<button type="submit" id="SubmitLogin" name="SubmitLogin" class="button btn btn-default button-medium">
@@ -103,7 +103,7 @@
 							<p class="lost_password form-group"><a href="{$link->getPageLink('password')|escape:'html':'UTF-8'}" title="{l s='Recover your forgotten password'}" rel="nofollow">{l s='Forgot your password?'}</a></p>
 						</div>
 					</form>
-				</div>
+				</div> -->
 			</div>
 			{if isset($inOrderProcess) && $inOrderProcess && $PS_GUEST_CHECKOUT_ENABLED}
 				<form action="{$link->getPageLink('authentication', true, NULL, "back=$back")|escape:'html':'UTF-8'}" method="post" id="new_account_form" class="std clearfix">
@@ -363,7 +363,7 @@
 									<label for="postcode_invoice">{l s='Zip/Postal Code'} <sup>*</sup></label>
 									<input type="text" class="form-control" name="postcode_invoice" id="postcode_invoice" value="" onkeyup="$('#postcode').val($('#postcode').val().toUpperCase());" />
 								</div>
-								{/if}					
+								{/if}
 								{if !$stateExist}
 								<div class="required id_state_invoice form-group unvisible">
 									<label for="id_state_invoice">{l s='State'} <sup>*</sup></label>
@@ -378,7 +378,7 @@
 								</div>
 								{if isset($one_phone_at_least) && $one_phone_at_least}
 									<p class="inline-infos required is_customer_param">{l s='You must register at least one phone number.'}</p>
-								{/if}					
+								{/if}
 								<div class="form-group is_customer_param">
 									<label for="phone_invoice">{l s='Home phone'}</label>
 									<input type="text" class="form-control" name="phone_invoice" id="phone_invoice" value="{if isset($guestInformations) && $guestInformations.phone_invoice}{$guestInformations.phone_invoice}{/if}" />
@@ -456,7 +456,7 @@
 						<label for="passwd">{l s='Password'} <sup>*</sup></label>
 						<input type="password" class="is_required validate form-control" data-validate="isPasswd" name="passwd" id="passwd" />
 						<span class="form_info condicionPass">{l s='(Five characters minimum)'}</span>
-					</div> 
+					</div>
 					<div class="form-group fechaNacimiento">
 						<label>{l s='Date of Birth'}</label>
 						<div class="contenedorFecha">
@@ -609,7 +609,7 @@
 								<label for="postcode">{l s='Zip/Postal Code'} <sup>*</sup></label>
 								<input type="text" class="form-control" name="postcode" id="postcode" value="{if isset($smarty.post.postcode)}{$smarty.post.postcode}{/if}" onkeyup="$('#postcode').val($('#postcode').val().toUpperCase());" />
 							</p>
-						{/if}		
+						{/if}
 						{if $stateExist eq false}
 							<p class="required id_state select unvisible form-group">
 								<label for="id_state">{l s='State'} <sup>*</sup></label>

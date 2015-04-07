@@ -24,7 +24,6 @@
 *  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 *}
-		
 					<div id="slider_row" class="contCarrusel">
 						<div id="top_column" class="contCarruselInt">
 							{hook h="displayTopColumn"}
@@ -32,9 +31,9 @@
 
 					</div>
 					<div class="popularesMasVendidos">
-						
+
 						<div id="center_column">
-					
+
 						    {if isset($HOOK_HOME_TAB) && $HOOK_HOME_TAB|trim}
 						        <ul id="home-page-tabs" class="menuProductosHome">
 									{$HOOK_HOME_TAB}
@@ -43,8 +42,3 @@
 							<div class="tab-content" id="productosHome">
 								{$HOOK_HOME_TAB_CONTENT}
 							</div>
-							
-						
-						
- 				
-				
