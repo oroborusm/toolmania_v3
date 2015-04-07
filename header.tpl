@@ -126,7 +126,7 @@
 			<div class="telefono animated tada">
 			</div>
 			<div class="telefonoContenedor">
-				<span>987654321</span>
+				<span>223792188</span>
 			</div>
 		</header>
 
