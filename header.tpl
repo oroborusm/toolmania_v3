@@ -130,7 +130,7 @@
 			<div class="telefono animated tada">
 			</div>
 			<div class="telefonoContenedor">
-				<span>223792188</span>
+				<span>+56 22 3792188</span>
 			</div>
 		</header>
 

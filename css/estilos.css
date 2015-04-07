@@ -800,12 +800,12 @@ body header .telefonoContenedor {
   border-radius: 5px;
   display: none;
   left: 50%;
-  margin-left: 225px;
+  margin-left: 220px;
   padding: 10px;
   position: absolute;
   text-align: center;
   top: 55px;
-  width: 100px;
+  width: 110px;
 }
 body header .telefonoContenedor:after {
   border-bottom: 8px solid #fff;

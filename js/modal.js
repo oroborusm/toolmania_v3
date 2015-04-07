@@ -87,4 +87,4 @@
 	// add to global namespace
 	window.DialogFx = DialogFx;
 
-
+})( window );
