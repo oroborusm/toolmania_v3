@@ -68,6 +68,8 @@
 	<script type="text/javascript" src="{$js_dir}carrusel.js"></script>
 	<script type="text/javascript" src="{$js_dir}slimscroll.min.js"></script>
 	<script type="text/javascript" src="{$js_dir}owl.carousel.min.js"></script>
+	<script type="text/javascript" src="{$js_dir}classie.js"></script>
+	<script type="text/javascript" src="{$js_dir}modal.js"></script>
 
 
 
@@ -93,26 +95,28 @@
 		{/if}
 
 		{if $logged}
-		  <div class="cupon" style="display:none;">
+		  <div id="somedialog" class="dialog" style="display:none;">
 		  </div>
 		{else}
-			{if $page_name == 'authentication'}
-				<div class="cupon" style="display:none;">
+			{if $page_name === 'authentication'}
+				<div id="somedialog" class="dialog" style="display:none;">
 				</div>
 			{else}
-			  <div class="cupon">
-			    <div class="avisoCupon">
-			      <p>Si te logeas hay cupon de descuento washo</p>
-			      <a class="login" href="{$link->getPageLink('my-account', true)|escape:'html':'UTF-8'}" rel="nofollow" title="{l s='Log in to your customer account' mod='blockuserinfo'}">
-							<span>click para cupon</span>
-						</a>
-						<div class="noquieroCupon">X</div>
-			    </div>
-			  </div>
+				<div id="somedialog" class="dialog">
+				<div class="dialog__overlay"></div>
+				<div class="dialog__content">
+					<h2><strong>Pssss</strong>, si te registras tienes un descuento</h2>
+		      <a class="login" href="{$link->getPageLink('my-account', true)|escape:'html':'UTF-8'}" rel="nofollow" title="{l s='Log in to your customer account' mod='blockuserinfo'}">
+						<span>click para cupon</span>
+					</a>
+					<div><button class="action closeDialog" data-dialog-close>Close</button></div>
+				</div>
+				</div>
 			{/if}
 		{/if}
 
 		<header>
+			<button data-dialog="somedialog" class="trigger">Open Dialog</button>
 			<div class="header">
 				<figure>
 					<a href="{$base_dir}" title="{$shop_name|escape:'html':'UTF-8'}">

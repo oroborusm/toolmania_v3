@@ -4028,16 +4028,99 @@ td
 				input
 					display block
 					width 100%
+//
+// .cupon
+// 	background rgba(oscuro, .5)
+// 	//display block
+// 	height 100%
+// 	position fixed
+// 	visibility hidden
+// 	width 100%
+// 	z-index 10000
+// 	.avisoCupon
+// 		background white
+// 		margin 0 auto
+// 		width 500px
 
-.cupon
-	background rgba(oscuro, .5)
-	//display block
-	height 100%
-	position fixed
-	visibility hidden
-	width 100%
-	z-index 10000
-	.avisoCupon
-		background white
-		margin 0 auto
-		width 500px
+
+
+
+.dialog,
+.dialog__overlay {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.dialog {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	pointer-events: none;
+	position: fixed;
+	z-index: 99999999999;
+}
+
+.dialog__overlay {
+	background: rgba(55, 58, 71, 0.9);
+	opacity: 0;
+	position: absolute;
+	transition: opacity 0.3s;
+}
+
+.dialog--open .dialog__overlay {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.dialog__content {
+	background: #fff;
+	min-width: 290px;
+	max-width: 560px;
+	opacity: 0;
+	padding: 4em;
+	position: relative;
+	text-align: center;
+	width: 50%;
+	z-index: 5;
+}
+
+.dialog--open .dialog__content {
+	pointer-events: auto;
+}
+
+.trigger
+	display none
+
+/* Content */
+.dialog h2 {
+	margin: 0;
+	font-weight: 400;
+	font-size: 2em;
+	padding: 0 0 2em;
+	margin: 0;
+}
+.dialog.dialog--open .dialog__content,
+.dialog.dialog--close .dialog__content {
+	animation-duration: 0.3s;
+	animation-fill-mode: forwards;
+}
+
+.dialog.dialog--open .dialog__content {
+	animation-name: anim-open;
+}
+
+.dialog.dialog--close .dialog__content {
+	animation-name: anim-close;
+}
+
+@keyframes anim-open {
+	0% { opacity: 0; transform: scale3d(1.1, 1.1, 1); }
+	100% { opacity: 1; transform: scale3d(1, 1, 1); }
+}
+
+@keyframes anim-close {
+	0% { opacity: 1; }
+	100% { opacity: 0; transform: scale3d(0.9, 0.9, 1); }
+}
