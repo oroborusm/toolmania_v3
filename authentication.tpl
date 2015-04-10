@@ -62,7 +62,7 @@
 							<div class="alerta" id="create_account_error" style="display:none"></div>
 							<div class="form-group">
 								<label for="email_create">{l s='Email address'}</label>
-								<input type="text" class="is_required validate account_input form-control" data-validate="isEmail" id="email_create" name="email_create" value="{if isset($smarty.post.email_create)}{$smarty.post.email_create|stripslashes}{/if}" />
+								<input type="text" class="is_required validate account_input form-control" data-validate="isEmail" id="email_create" name="email_create" value="{if isset($smarty.post.email_create)}{$smarty.post.email_create|stripslashes}{/if}" placeholder="Ingresa tu correo"/>
 							</div>
 							<div class="submit">
 								{if isset($back)}<input type="hidden" class="hidden" name="back" value="{$back|escape:'html':'UTF-8'}" />{/if}
@@ -440,63 +440,89 @@
 							</div>
 						{/foreach}
 					</div>
-					<div class="required form-group nombre">
-						<label for="customer_firstname">{l s='First name'} <sup>*</sup></label>
-						<input onkeyup="$('#firstname').val(this.value);" type="text" class="is_required validate form-control" data-validate="isName" id="customer_firstname" name="customer_firstname" value="{if isset($smarty.post.customer_firstname)}{$smarty.post.customer_firstname}{/if}" />
-					</div>
-					<div class="required form-group apellido">
-						<label for="customer_lastname">{l s='Last name'} <sup>*</sup></label>
-						<input onkeyup="$('#lastname').val(this.value);" type="text" class="is_required validate form-control" data-validate="isName" id="customer_lastname" name="customer_lastname" value="{if isset($smarty.post.customer_lastname)}{$smarty.post.customer_lastname}{/if}" />
+					<div class="nombreCompleto">
+						<p class="identificacion">Nombre:</p>
+						<div class="nombreApellido">
+							<div class="required form-group nombre">
+								<!-- <label for="customer_firstname">{l s='First name'} <sup>*</sup></label> -->
+								<input onkeyup="$('#firstname').val(this.value);" type="text" class="is_required validate form-control" data-validate="isName" id="customer_firstname" name="customer_firstname" value="{if isset($smarty.post.customer_firstname)}{$smarty.post.customer_firstname}{/if}" placeholder="Nombre" required/>
+							</div>
+							<div class="required form-group apellido">
+								<!-- <label for="customer_lastname">{l s='Last name'} <sup>*</sup></label> -->
+								<input onkeyup="$('#lastname').val(this.value);" type="text" class="is_required validate form-control" data-validate="isName" id="customer_lastname" name="customer_lastname" value="{if isset($smarty.post.customer_lastname)}{$smarty.post.customer_lastname}{/if}" placeholder="Apellido" required/>
+							</div>
+						</div>
 					</div>
 					<div class="required form-group correo">
-						<label for="email">{l s='Email'} <sup>*</sup></label>
-						<input type="text" class="is_required validate form-control" data-validate="isEmail" id="email" name="email" value="{if isset($smarty.post.email)}{$smarty.post.email}{/if}" />
+						<!-- <label for="email">{l s='Email'} <sup>*</sup></label> -->
+						<div class="correoWrap">
+							<p class="textoCorreo">Correo:</p>
+							<!-- <label for="email">Correo:</label> -->
+							<div class="inputCorreo">
+								<input type="text" class="is_required validate form-control" data-validate="isEmail" id="email" name="email" value="{if isset($smarty.post.email)}{$smarty.post.email}{/if}" placeholder="Correo" required/>
+							</div>
+						</div>
 					</div>
-					<div class="required password form-group">
+
+					<div class="required form-group password">
+						<!-- <label for="email">{l s='Email'} <sup>*</sup></label> -->
+						<div class="passwordWrap">
+							<p class="textoPassword">Contraseña:</p>
+							<!-- <label for="email">Correo:</label> -->
+							<div class="inputPassword">
+								<input type="password" class="is_required validate form-control" data-validate="isPasswd" name="passwd" id="passwd" placeholder="Contraseña" required/>
+							</div>
+							<span class="form_info condicionPass">{l s='(Five characters minimum)'}</span>
+						</div>
+					</div>
+
+					<!-- <div class="required password form-group">
 						<label for="passwd">{l s='Password'} <sup>*</sup></label>
 						<input type="password" class="is_required validate form-control" data-validate="isPasswd" name="passwd" id="passwd" />
 						<span class="form_info condicionPass">{l s='(Five characters minimum)'}</span>
-					</div>
+					</div> -->
 					<div class="form-group fechaNacimiento">
-						<label>{l s='Date of Birth'}</label>
-						<div class="contenedorFecha">
-							<div class="selectorFecha">
-								<select id="days" name="days" class="form-control">
-									<option value="">-</option>
-									{foreach from=$days item=day}
-										<option value="{$day}" {if ($sl_day == $day)} selected="selected"{/if}>{$day}&nbsp;&nbsp;</option>
-									{/foreach}
-								</select>
-								{*
-									{l s='January'}
-									{l s='February'}
-									{l s='March'}
-									{l s='April'}
-									{l s='May'}
-									{l s='June'}
-									{l s='July'}
-									{l s='August'}
-									{l s='September'}
-									{l s='October'}
-									{l s='November'}
-									{l s='December'}
-								*}
-							</div>
-							<div class="selectorFecha">
-								<select id="months" name="months" class="form-control">
-									<option value="">-</option>
-									{foreach from=$months key=k item=month}
-										<option value="{$k}" {if ($sl_month == $k)} selected="selected"{/if}>{l s=$month}&nbsp;</option>
-									{/foreach}
-								</select>
-							</div>
-							<div class="selectorFecha">
-								<select id="years" name="years" class="form-control">
-									<option value="">-</option>
-									{foreach from=$years item=year}
-										<option value="{$year}" {if ($sl_year == $year)} selected="selected"{/if}>{$year}&nbsp;&nbsp;</option>
-									{/foreach}
-								</select>
+						<div class="nacimientoWrap">
+							<p class="textoNacimiento">Fecha de nacimiento:</p>
+							<div class="contenedorFecha">
+								<div class="selectorFecha">
+									<select id="days" name="days" class="form-control">
+										<option value="">-</option>
+										{foreach from=$days item=day}
+											<option value="{$day}" {if ($sl_day == $day)} selected="selected"{/if}>{$day}&nbsp;&nbsp;</option>
+										{/foreach}
+									</select>
+									{*
+										{l s='January'}
+										{l s='February'}
+										{l s='March'}
+										{l s='April'}
+										{l s='May'}
+										{l s='June'}
+										{l s='July'}
+										{l s='August'}
+										{l s='September'}
+										{l s='October'}
+										{l s='November'}
+										{l s='December'}
+									*}
+								</div>
+								<div class="selectorFecha">
+									<select id="months" name="months" class="form-control">
+										<option value="">-</option>
+										{foreach from=$months key=k item=month}
+											<option value="{$k}" {if ($sl_month == $k)} selected="selected"{/if}>{l s=$month}&nbsp;</option>
+										{/foreach}
+									</select>
+								</div>
+								<div class="selectorFecha">
+									<select id="years" name="years" class="form-control">
+										<option value="">-</option>
+										{foreach from=$years item=year}
+											<option value="{$year}" {if ($sl_year == $year)} selected="selected"{/if}>{$year}&nbsp;&nbsp;</option>
+										{/foreach}
+									</select>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -652,10 +678,10 @@
 					<input type="hidden" name="email_create" value="1" />
 					<input type="hidden" name="is_new_customer" value="1" />
 					{if isset($back)}<input type="hidden" class="hidden" name="back" value="{$back|escape:'html':'UTF-8'}" />{/if}
-					<button type="submit" name="submitAccount" id="submitAccount" class="btn btn-default button button-medium">
+					<button type="submit" name="submitAccount" id="submitAccount" class="btn btn-default button button-medium" style="margin-bottom: 2em;">
 						<span>{l s='Register'}</span>
 					</button>
-					<p class="pull-right requerido"><span><sup>*</sup>{l s='Required field'}</span></p>
+					<!-- <p class="pull-right requerido"><span><sup>*</sup>{l s='Required field'}</span></p> -->
 				</div>
 			</form>
 		{/if}

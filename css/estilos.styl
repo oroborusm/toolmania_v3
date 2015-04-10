@@ -789,7 +789,7 @@ body
 							label
 								font-size 15px
 							input
-								border-radius 5px
+								//border-radius 5px
 								display block
 								width 100%
 						.submit
@@ -806,35 +806,64 @@ body
 								display block
 								width 100%
 		.formularioCrea
-			border 1px solid naranjito
-			border-radius 1em
+			border 2px solid naranjito
+			border-radius 5px
 			margin 0 auto
 			width 80%
 			.creaCuenta
 				margin 0 auto
-				width 90%
+				//width 90%
 				h3
 					font-size 18px
 					text-align center
-				.apellido
 				.correo
-				.nombre
 				.password
-					margin 25px 0
-					input
-						border-radius 5px
-						width 69%
-					input
-					label
-						display inline-block
-						vertical-align middle
-					label
-						font-size 13px
-						text-align right
-						width 28%
-						sup
-							color red
+					margin .5em 0
+					.correoWrap
+					.passwordWrap
+						display block
+						margin 0 auto
+						width 80%
+						.inputCorreo
+						.inputPassword
+							width 70%
+							input
+								box-sizing border-box
+								//padding 0 2%
+								width 100%
+						.inputCorreo
+						.textoCorreo
+						.inputPassword
+						.textoPassword
+							display inline-block
+						.textoCorreo
+						.textoPassword
+							margin 0
+							line-height 22px
+							text-align right
+							width 28%
+
+				// .correo
+				// .password
+				// 	margin 25px 0
+				// 	// input
+				// 	// 	color oscuro
+				// 	// 	border-radius 5px
+				// 	// 	width 69%
+				// 	input
+				// 	label
+				// 		display inline-block
+				// 		vertical-align middle
+				// 	label
+				// 		font-size 13px
+				// 		text-align right
+				// 		width 28%
+				// 		// sup
+				// 		// 	color red
 				.checkbox
+					margin 0 auto
+					text-align left
+					width 70%
 					label
 						width 69%
 					label
@@ -851,51 +880,91 @@ body
 				.checkboxArriba
 					margin-top 30px
 				.fechaNacimiento
-					label
-						color oscuro
-						display block
-						font-weight 600
-						text-align center
-						text-transform uppercase
-					.contenedorFecha
-						.selectorFecha
-							display inline-block
-							text-align center
-							width 32%
-							select
-								background none
-								border 1px solid #999
-								border-radius 5px
-								height 27px
-								left 0px
-								//opacity 0
-								//position absolute
+					margin-bottom 20px
+					.nacimientoWrap
+						margin 0 auto
+						width 80%
+						.contenedorFecha
+							margin-right 4.7px
+							width 70%
+							.selectorFecha
+								display inline-block
 								text-align center
-								top 0px
+								width 32%
+								select
+									background none
+									border 1px solid #999
+									//border-radius 5px
+									box-sizing border-box
+									height 24px
+									left 0px
+									//opacity 0
+									//position absolute
+									text-align center
+									top 0px
+									width 103% !important
+								span
+									display none
+								.selector
+									width 100% !important
+									select
+										background none
+										font-size 15px
+										left 0px
+										//opacity 0
+										//position absolute
+										top 0px
+										width 100%
+									span
+										display none
+						.contenedorFecha
+						.textoNacimiento
+							display inline-block
+							vertical-align top
+						.textoNacimiento
+							font-size 13px
+							margin 0
+							line-height 22px
+							text-align right
+							width 28%
+				.nombreCompleto
+					display block
+					margin 0 auto .5em
+					width 80%
+					.identificacion
+					.nombreApellido
+						display inline-block
+						vertical-align top
+					.identificacion
+						font-size 13px
+						line-height 22px
+						margin 0
+						text-align right
+						width 28%
+					.nombreApellido
+						width 70%
+						.apellido
+						.nombre
+							display inline-block
+							vertical-align top
+							width 49%
+						.apellido
+						.nombre
+							input
+								box-sizing border-box
+								padding 0 !important
 								width 100%
-							span
-								display none
-							// .selector
-							// 	width 100% !important
-							// 	select
-							// 		background none
-							// 		border 1px solid oscuro
-							// 		height 27px
-							// 		left 0px
-							// 		//opacity 0
-							// 		//position absolute
-							// 		top 0px
-							// 		width 100%
-							// 	span
-							// 		display none
+						.nombre
+							margin 0 2px 0 -1px
 				.password
 					.condicionPass
 						display block
-						font-size 13px
+						font-size 10px
 						font-style italic
 						text-align right
 						width 28%
 				.srSra
+					display none
 					text-align center
 					.tratoGenero
 						color oscuro
@@ -921,9 +990,9 @@ body
 					span
 						color white
 						line-height 30px
-				.requerido
-					color red
-					font-size 11px
+				// .requerido
+				// 	color red
+				// 	font-size 11px
 	.box
 		margin 0 auto
 		text-align center
@@ -960,7 +1029,7 @@ body
 						display none
 		.correos
 		.required
-			color red
+			//color red
 			font-size 13px
 	.contenedorCategoria
 		margin 0 auto
@@ -2436,6 +2505,8 @@ table
 		line-height 40px
 		margin 18px auto
 		width 300px
+	label
+		font-size 13px
 	label
 	.checker
 		display inline-block

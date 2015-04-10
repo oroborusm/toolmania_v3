@@ -885,8 +885,6 @@ body .autenticacion .contenedorLogin .creaCuenta form .form_content .form-group 
   font-size: 15px;
 }
 body .autenticacion .contenedorLogin .creaCuenta form .form_content .form-group input {
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
   display: block;
   width: 100%;
 }
@@ -909,58 +907,89 @@ body .autenticacion .contenedorLogin .creaCuenta form .form_content .submit inpu
   width: 100%;
 }
 body .autenticacion .formularioCrea {
-  border: 1px solid #f8b302;
-  -webkit-border-radius: 1em;
-  border-radius: 1em;
+  border: 2px solid #f8b302;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
   margin: 0 auto;
   width: 80%;
 }
 body .autenticacion .formularioCrea .creaCuenta {
   margin: 0 auto;
-  width: 90%;
 }
 body .autenticacion .formularioCrea .creaCuenta h3 {
   font-size: 18px;
   text-align: center;
 }
-body .autenticacion .formularioCrea .creaCuenta .apellido,
 body .autenticacion .formularioCrea .creaCuenta .correo,
-body .autenticacion .formularioCrea .creaCuenta .nombre,
 body .autenticacion .formularioCrea .creaCuenta .password {
-  margin: 25px 0;
+  margin: 0.5em 0;
 }
-body .autenticacion .formularioCrea .creaCuenta .apellido input,
-body .autenticacion .formularioCrea .creaCuenta .correo input,
-body .autenticacion .formularioCrea .creaCuenta .nombre input,
-body .autenticacion .formularioCrea .creaCuenta .password input {
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  width: 69%;
+body .autenticacion .formularioCrea .creaCuenta .correo .correoWrap,
+body .autenticacion .formularioCrea .creaCuenta .password .correoWrap,
+body .autenticacion .formularioCrea .creaCuenta .correo .passwordWrap,
+body .autenticacion .formularioCrea .creaCuenta .password .passwordWrap {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
 }
-body .autenticacion .formularioCrea .creaCuenta .apellido input,
-body .autenticacion .formularioCrea .creaCuenta .correo input,
-body .autenticacion .formularioCrea .creaCuenta .nombre input,
-body .autenticacion .formularioCrea .creaCuenta .password input,
-body .autenticacion .formularioCrea .creaCuenta .apellido label,
-body .autenticacion .formularioCrea .creaCuenta .correo label,
-body .autenticacion .formularioCrea .creaCuenta .nombre label,
-body .autenticacion .formularioCrea .creaCuenta .password label {
+body .autenticacion .formularioCrea .creaCuenta .correo .correoWrap .inputCorreo,
+body .autenticacion .formularioCrea .creaCuenta .password .correoWrap .inputCorreo,
+body .autenticacion .formularioCrea .creaCuenta .correo .passwordWrap .inputCorreo,
+body .autenticacion .formularioCrea .creaCuenta .password .passwordWrap .inputCorreo,
+body .autenticacion .formularioCrea .creaCuenta .correo .correoWrap .inputPassword,
+body .autenticacion .formularioCrea .creaCuenta .password .correoWrap .inputPassword,
+body .autenticacion .formularioCrea .creaCuenta .correo .passwordWrap .inputPassword,
+body .autenticacion .formularioCrea .creaCuenta .password .passwordWrap .inputPassword {
+  width: 70%;
+}
+body .autenticacion .formularioCrea .creaCuenta .correo .correoWrap .inputCorreo input,
+body .autenticacion .formularioCrea .creaCuenta .password .correoWrap .inputCorreo input,
+body .autenticacion .formularioCrea .creaCuenta .correo .passwordWrap .inputCorreo input,
+body .autenticacion .formularioCrea .creaCuenta .password .passwordWrap .inputCorreo input,
+body .autenticacion .formularioCrea .creaCuenta .correo .correoWrap .inputPassword input,
+body .autenticacion .formularioCrea .creaCuenta .password .correoWrap .inputPassword input,
+body .autenticacion .formularioCrea .creaCuenta .correo .passwordWrap .inputPassword input,
+body .autenticacion .formularioCrea .creaCuenta .password .passwordWrap .inputPassword input {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+}
+body .autenticacion .formularioCrea .creaCuenta .correo .correoWrap .inputCorreo,
+body .autenticacion .formularioCrea .creaCuenta .password .correoWrap .inputCorreo,
+body .autenticacion .formularioCrea .creaCuenta .correo .passwordWrap .inputCorreo,
+body .autenticacion .formularioCrea .creaCuenta .password .passwordWrap .inputCorreo,
+body .autenticacion .formularioCrea .creaCuenta .correo .correoWrap .textoCorreo,
+body .autenticacion .formularioCrea .creaCuenta .password .correoWrap .textoCorreo,
+body .autenticacion .formularioCrea .creaCuenta .correo .passwordWrap .textoCorreo,
+body .autenticacion .formularioCrea .creaCuenta .password .passwordWrap .textoCorreo,
+body .autenticacion .formularioCrea .creaCuenta .correo .correoWrap .inputPassword,
+body .autenticacion .formularioCrea .creaCuenta .password .correoWrap .inputPassword,
+body .autenticacion .formularioCrea .creaCuenta .correo .passwordWrap .inputPassword,
+body .autenticacion .formularioCrea .creaCuenta .password .passwordWrap .inputPassword,
+body .autenticacion .formularioCrea .creaCuenta .correo .correoWrap .textoPassword,
+body .autenticacion .formularioCrea .creaCuenta .password .correoWrap .textoPassword,
+body .autenticacion .formularioCrea .creaCuenta .correo .passwordWrap .textoPassword,
+body .autenticacion .formularioCrea .creaCuenta .password .passwordWrap .textoPassword {
   display: inline-block;
-  vertical-align: middle;
 }
-body .autenticacion .formularioCrea .creaCuenta .apellido label,
-body .autenticacion .formularioCrea .creaCuenta .correo label,
-body .autenticacion .formularioCrea .creaCuenta .nombre label,
-body .autenticacion .formularioCrea .creaCuenta .password label {
-  font-size: 13px;
+body .autenticacion .formularioCrea .creaCuenta .correo .correoWrap .textoCorreo,
+body .autenticacion .formularioCrea .creaCuenta .password .correoWrap .textoCorreo,
+body .autenticacion .formularioCrea .creaCuenta .correo .passwordWrap .textoCorreo,
+body .autenticacion .formularioCrea .creaCuenta .password .passwordWrap .textoCorreo,
+body .autenticacion .formularioCrea .creaCuenta .correo .correoWrap .textoPassword,
+body .autenticacion .formularioCrea .creaCuenta .password .correoWrap .textoPassword,
+body .autenticacion .formularioCrea .creaCuenta .correo .passwordWrap .textoPassword,
+body .autenticacion .formularioCrea .creaCuenta .password .passwordWrap .textoPassword {
+  margin: 0;
+  line-height: 22px;
   text-align: right;
   width: 28%;
 }
-body .autenticacion .formularioCrea .creaCuenta .apellido label sup,
-body .autenticacion .formularioCrea .creaCuenta .correo label sup,
-body .autenticacion .formularioCrea .creaCuenta .nombre label sup,
-body .autenticacion .formularioCrea .creaCuenta .password label sup {
-  color: #f00;
+body .autenticacion .formularioCrea .creaCuenta .checkbox {
+  margin: 0 auto;
+  text-align: left;
+  width: 70%;
 }
 body .autenticacion .formularioCrea .creaCuenta .checkbox label {
   width: 69%;
@@ -982,40 +1011,108 @@ body .autenticacion .formularioCrea .creaCuenta .checkbox .checker {
 body .autenticacion .formularioCrea .creaCuenta .checkboxArriba {
   margin-top: 30px;
 }
-body .autenticacion .formularioCrea .creaCuenta .fechaNacimiento label {
-  color: #434142;
-  display: block;
-  font-weight: 600;
-  text-align: center;
-  text-transform: uppercase;
+body .autenticacion .formularioCrea .creaCuenta .fechaNacimiento {
+  margin-bottom: 20px;
 }
-body .autenticacion .formularioCrea .creaCuenta .fechaNacimiento .contenedorFecha .selectorFecha {
+body .autenticacion .formularioCrea .creaCuenta .fechaNacimiento .nacimientoWrap {
+  margin: 0 auto;
+  width: 80%;
+}
+body .autenticacion .formularioCrea .creaCuenta .fechaNacimiento .nacimientoWrap .contenedorFecha {
+  margin-right: 4.7px;
+  width: 70%;
+}
+body .autenticacion .formularioCrea .creaCuenta .fechaNacimiento .nacimientoWrap .contenedorFecha .selectorFecha {
   display: inline-block;
   text-align: center;
   width: 32%;
 }
-body .autenticacion .formularioCrea .creaCuenta .fechaNacimiento .contenedorFecha .selectorFecha select {
+body .autenticacion .formularioCrea .creaCuenta .fechaNacimiento .nacimientoWrap .contenedorFecha .selectorFecha select {
   background: none;
   border: 1px solid #999;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  height: 27px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 24px;
   left: 0px;
   text-align: center;
   top: 0px;
+  width: 103% !important;
+}
+body .autenticacion .formularioCrea .creaCuenta .fechaNacimiento .nacimientoWrap .contenedorFecha .selectorFecha span {
+  display: none;
+}
+body .autenticacion .formularioCrea .creaCuenta .fechaNacimiento .nacimientoWrap .contenedorFecha .selectorFecha .selector {
+  width: 100% !important;
+}
+body .autenticacion .formularioCrea .creaCuenta .fechaNacimiento .nacimientoWrap .contenedorFecha .selectorFecha .selector select {
+  background: none;
+  font-size: 15px;
+  left: 0px;
+  top: 0px;
   width: 100%;
 }
-body .autenticacion .formularioCrea .creaCuenta .fechaNacimiento .contenedorFecha .selectorFecha span {
+body .autenticacion .formularioCrea .creaCuenta .fechaNacimiento .nacimientoWrap .contenedorFecha .selectorFecha .selector span {
   display: none;
+}
+body .autenticacion .formularioCrea .creaCuenta .fechaNacimiento .nacimientoWrap .contenedorFecha,
+body .autenticacion .formularioCrea .creaCuenta .fechaNacimiento .nacimientoWrap .textoNacimiento {
+  display: inline-block;
+  vertical-align: top;
+}
+body .autenticacion .formularioCrea .creaCuenta .fechaNacimiento .nacimientoWrap .textoNacimiento {
+  font-size: 13px;
+  margin: 0;
+  line-height: 22px;
+  text-align: right;
+  width: 28%;
+}
+body .autenticacion .formularioCrea .creaCuenta .nombreCompleto {
+  display: block;
+  margin: 0 auto 0.5em;
+  width: 80%;
+}
+body .autenticacion .formularioCrea .creaCuenta .nombreCompleto .identificacion,
+body .autenticacion .formularioCrea .creaCuenta .nombreCompleto .nombreApellido {
+  display: inline-block;
+  vertical-align: top;
+}
+body .autenticacion .formularioCrea .creaCuenta .nombreCompleto .identificacion {
+  font-size: 13px;
+  line-height: 22px;
+  margin: 0;
+  text-align: right;
+  width: 28%;
+}
+body .autenticacion .formularioCrea .creaCuenta .nombreCompleto .nombreApellido {
+  width: 70%;
+}
+body .autenticacion .formularioCrea .creaCuenta .nombreCompleto .nombreApellido .apellido,
+body .autenticacion .formularioCrea .creaCuenta .nombreCompleto .nombreApellido .nombre {
+  display: inline-block;
+  vertical-align: top;
+  width: 49%;
+}
+body .autenticacion .formularioCrea .creaCuenta .nombreCompleto .nombreApellido .apellido input,
+body .autenticacion .formularioCrea .creaCuenta .nombreCompleto .nombreApellido .nombre input {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 !important;
+  width: 100%;
+}
+body .autenticacion .formularioCrea .creaCuenta .nombreCompleto .nombreApellido .nombre {
+  margin: 0 2px 0 -1px;
 }
 body .autenticacion .formularioCrea .creaCuenta .password .condicionPass {
   display: block;
-  font-size: 13px;
+  font-size: 10px;
   font-style: italic;
   text-align: right;
   width: 28%;
 }
 body .autenticacion .formularioCrea .creaCuenta .srSra {
+  display: none;
   text-align: center;
 }
 body .autenticacion .formularioCrea .creaCuenta .srSra .tratoGenero {
@@ -1047,10 +1144,6 @@ body .autenticacion .formularioCrea .submit button {
 body .autenticacion .formularioCrea .submit button span {
   color: #fff;
   line-height: 30px;
-}
-body .autenticacion .formularioCrea .submit .requerido {
-  color: #f00;
-  font-size: 11px;
 }
 body .box {
   margin: 0 auto;
@@ -1098,7 +1191,6 @@ body .box form .form-group .selector span {
 }
 body .box .correos,
 body .box .required {
-  color: #f00;
   font-size: 13px;
 }
 body .contenedorCategoria {
@@ -2779,6 +2871,9 @@ table tfoot tr td {
   margin: 18px auto;
   width: 300px;
 }
+.checkbox label {
+  font-size: 13px;
+}
 .checkbox label,
 .checkbox .checker {
   display: inline-block;
@@ -3086,8 +3181,8 @@ table tfoot tr td {
   min-height: 280px;
   left: 0;
   opacity: 1 !important;
-  -ms-filter: none;
-  filter: none;
+  -ms-filter: none !important;
+  filter: none !important;
   padding: 10px 12%;
   position: absolute;
   text-align: left;
@@ -3120,8 +3215,8 @@ table tfoot tr td {
   display: block !important;
   margin: 13px 0 0 0;
   opacity: 1 !important;
-  -ms-filter: none;
-  filter: none;
+  -ms-filter: none !important;
+  filter: none !important;
   padding: 0;
   text-align: left;
   width: 100%;
