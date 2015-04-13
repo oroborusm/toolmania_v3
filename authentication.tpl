@@ -656,7 +656,7 @@
 					<button type="submit" name="submitAccount" id="submitAccount" class="btn btn-default button button-medium">
 						<span>{l s='Register'}</span>
 					</button>
-					<p class="pull-right requerido"><span><sup>*</sup>{l s='Required field'}</span></p>
+					<!-- <p class="pull-right requerido"><span><sup>*</sup>{l s='Required field'}</span></p> -->
 				</div>
 			</form>
 		{/if}

@@ -1005,7 +1005,13 @@ body .autenticacion .formularioCrea .creaCuenta .password .condicionPass {
   font-style: italic;
   text-align: right;
 }
+body .autenticacion .formularioCrea .creaCuenta .checkbox {
+  margin: 0 auto;
+  width: 65%;
+}
 body .autenticacion .formularioCrea .creaCuenta .checkbox label {
+  font-size: 13px;
+  text-align: left;
   width: 69%;
 }
 body .autenticacion .formularioCrea .creaCuenta .checkbox label,
@@ -1020,7 +1026,6 @@ body .autenticacion .formularioCrea .creaCuenta .checkbox .checker span input {
 }
 body .autenticacion .formularioCrea .creaCuenta .checkbox .checker {
   text-align: right;
-  width: 29%;
 }
 body .autenticacion .formularioCrea .creaCuenta .checkboxArriba {
   margin-top: 30px;
