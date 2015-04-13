@@ -62,7 +62,7 @@
 							<div class="alerta" id="create_account_error" style="display:none"></div>
 							<div class="form-group">
 								<label for="email_create">{l s='Email address'}</label>
-								<input type="text" class="is_required validate account_input form-control" data-validate="isEmail" id="email_create" name="email_create" value="{if isset($smarty.post.email_create)}{$smarty.post.email_create|stripslashes}{/if}" placeholder="Ingrese su correillo" />
+								<input type="text" class="is_required validate account_input form-control" data-validate="isEmail" id="email_create" name="email_create" value="{if isset($smarty.post.email_create)}{$smarty.post.email_create|stripslashes}{/if}" placeholder="Ingrese su correo" />
 							</div>
 							<div class="submit">
 								{if isset($back)}<input type="hidden" class="hidden" name="back" value="{$back|escape:'html':'UTF-8'}" />{/if}
@@ -428,9 +428,8 @@
 				{$HOOK_CREATE_ACCOUNT_TOP}
 				<div class="account_creation creaCuenta">
 					<h3 class="page-subheading">{l s='Your personal information'}</h3>
-					<div class="srSra">
+					<!-- <div class="srSra">
 						<label class="tratoGenero">{l s='Title'}</label>
-						<!-- <br /> -->
 						{foreach from=$genders key=k item=gender}
 							<div class="radio-inline radioSeleccion">
 								<label for="id_gender{$gender->id}" class="top">
@@ -439,30 +438,32 @@
 								</label>
 							</div>
 						{/foreach}
-					</div>
-					<div class="required form-group nombre">
-						<label for="customer_firstname">{l s='First name'} <sup>*</sup></label>
-						<input onkeyup="$('#firstname').val(this.value);" type="text" class="is_required validate form-control" data-validate="isName" id="customer_firstname" name="customer_firstname" value="{if isset($smarty.post.customer_firstname)}{$smarty.post.customer_firstname}{/if}" />
-					</div>
-					<div class="required form-group apellido">
-						<label for="customer_lastname">{l s='Last name'} <sup>*</sup></label>
-						<input onkeyup="$('#lastname').val(this.value);" type="text" class="is_required validate form-control" data-validate="isName" id="customer_lastname" name="customer_lastname" value="{if isset($smarty.post.customer_lastname)}{$smarty.post.customer_lastname}{/if}" />
+					</div> -->
+					<div class="nombreApellido">
+						<div class="required form-group nombre">
+							<label for="customer_firstname">{l s='First name'}</label>
+							<input onkeyup="$('#firstname').val(this.value);" type="text" class="is_required validate form-control" data-validate="isName" id="customer_firstname" name="customer_firstname" value="{if isset($smarty.post.customer_firstname)}{$smarty.post.customer_firstname}{/if}" required placeholder="ej: Juan" />
+						</div>
+						<div class="required form-group apellido">
+							<label for="customer_lastname">{l s='Last name'}</label>
+							<input onkeyup="$('#lastname').val(this.value);" type="text" class="is_required validate form-control" data-validate="isName" id="customer_lastname" name="customer_lastname" value="{if isset($smarty.post.customer_lastname)}{$smarty.post.customer_lastname}{/if}" required placeholder="ej: Perez"/>
+						</div>
 					</div>
 					<div class="required form-group correo">
-						<label for="email">{l s='Email'} <sup>*</sup></label>
-						<input type="text" class="is_required validate form-control" data-validate="isEmail" id="email" name="email" value="{if isset($smarty.post.email)}{$smarty.post.email}{/if}" />
+						<label for="email">{l s='Email'}</label>
+						<input type="text" class="is_required validate form-control" data-validate="isEmail" id="email" name="email" value="{if isset($smarty.post.email)}{$smarty.post.email}{/if}" placeholder="Ingresa tu correo" required/>
 					</div>
 					<div class="required password form-group">
-						<label for="passwd">{l s='Password'} <sup>*</sup></label>
-						<input type="password" class="is_required validate form-control" data-validate="isPasswd" name="passwd" id="passwd" />
+						<label for="passwd">{l s='Password'}</label>
+						<input type="password" class="is_required validate form-control" data-validate="isPasswd" name="password" id="passwd" placeholder="Ingresa tu contraseña" required/>
 						<span class="form_info condicionPass">{l s='(Five characters minimum)'}</span>
 					</div>
 					<div class="form-group fechaNacimiento">
-						<label>{l s='Date of Birth'}</label>
+						<h3>{l s='Date of Birth'}</h3>
 						<div class="contenedorFecha">
 							<div class="selectorFecha">
 								<select id="days" name="days" class="form-control">
-									<option value="">-</option>
+									<option value="">Día</option>
 									{foreach from=$days item=day}
 										<option value="{$day}" {if ($sl_day == $day)} selected="selected"{/if}>{$day}&nbsp;&nbsp;</option>
 									{/foreach}
@@ -484,7 +485,7 @@
 							</div>
 							<div class="selectorFecha">
 								<select id="months" name="months" class="form-control">
-									<option value="">-</option>
+									<option value="">Mes</option>
 									{foreach from=$months key=k item=month}
 										<option value="{$k}" {if ($sl_month == $k)} selected="selected"{/if}>{l s=$month}&nbsp;</option>
 									{/foreach}
@@ -492,7 +493,7 @@
 							</div>
 							<div class="selectorFecha">
 								<select id="years" name="years" class="form-control">
-									<option value="">-</option>
+									<option value="">Año</option>
 									{foreach from=$years item=year}
 										<option value="{$year}" {if ($sl_year == $year)} selected="selected"{/if}>{$year}&nbsp;&nbsp;</option>
 									{/foreach}

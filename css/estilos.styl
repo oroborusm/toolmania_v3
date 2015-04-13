@@ -799,8 +799,10 @@ body
 								box-sizing border-box
 								display block
 								outline none
-								padding 3px
+								padding 5px
 								width 100%
+								&:focus
+									background aliceblue
 						.submit
 							margin-top 22px
 							button
@@ -815,8 +817,8 @@ body
 								display block
 								width 100%
 		.formularioCrea
-			border 1px solid naranjito
-			border-radius 1em
+			border 1px solid clarito
+			border-radius 5px
 			margin 0 auto
 			width 80%
 			.creaCuenta
@@ -825,24 +827,55 @@ body
 				h3
 					font-size 18px
 					text-align center
-				.apellido
-				.correo
-				.nombre
-				.password
-					margin 25px 0
-					input
-						border-radius 5px
-						width 69%
-					input
-					label
+				.nombreApellido
+					border-bottom 1px solid naranjito
+					border-top 1px solid naranjito
+					.apellido
+					.nombre
 						display inline-block
 						vertical-align middle
+						width 49%
+						input
+							border none
+							box-sizing border-box
+							color #999
+							font-size 16px
+							outline none
+							padding 5px
+							width 100%
+							&:focus
+								background aliceblue
+						label
+							color oscuro
+							display block
+							text-align left
+				.correo
+				.password
+					border-bottom 1px solid naranjito
+					border-top 1px solid naranjito
+					margin 25px 0
+					input
+						border none
+						box-sizing border-box
+						color #999
+						font-size 16px
+						outline none
+						padding 5px
+						width 100%
+						&:focus
+							background aliceblue
 					label
+						display block
+						color oscuro
 						font-size 13px
-						text-align right
+						text-align left
 						width 28%
-						sup
-							color red
+					.condicionPass
+						color oscuro
+						display block
+						font-size 11px
+						font-style italic
+						text-align right
 				.checkbox
 					label
 						width 69%
@@ -865,27 +898,40 @@ body
 						display block
 						font-weight 600
 						text-align center
-						text-transform uppercase
 					.contenedorFecha
+						border-bottom 1px solid naranjito
+						border-top 1px solid naranjito
+						margin 0 auto
+						width 70%
 						.selectorFecha
 							display inline-block
 							text-align center
 							width 32%
-							select
-								background none
-								border 1px solid #999
-								border-radius 5px
-								height 27px
-								left 0px
-								//opacity 0
-								//position absolute
-								text-align center
-								top 0px
-								width 100%
-							span
-								display none
-							// .selector
-							// 	width 100% !important
+							.selector
+								width 100% !important
+								select
+									background none
+									//border 1px solid #999
+									//border-radius 5px
+									border none
+									box-sizing border-box
+									color #999
+									font-size 13px
+									height 27px
+									left 0px
+									//opacity 0
+									outline 0
+									//position absolute
+									padding 5px
+									text-align center
+									top 0px
+									transition .3s
+									width 100%
+									&:hover
+										background naranjito
+										color white
+								span
+									display none
 							// 	select
 							// 		background none
 							// 		border 1px solid oscuro
@@ -897,13 +943,6 @@ body
 							// 		width 100%
 							// 	span
 							// 		display none
-				.password
-					.condicionPass
-						display block
-						font-size 13px
-						font-style italic
-						text-align right
-						width 28%
 				.srSra
 					display none
 					text-align center
@@ -4136,6 +4175,6 @@ td
 }
 
 
-.placeholder{
-  color: #999;
+.my-placeholder{
+  color: #ccc;
 }

@@ -896,8 +896,11 @@ body .autenticacion .contenedorLogin .creaCuenta form .form_content .form-group 
   box-sizing: border-box;
   display: block;
   outline: none;
-  padding: 3px;
+  padding: 5px;
   width: 100%;
+}
+body .autenticacion .contenedorLogin .creaCuenta form .form_content .form-group input:focus {
+  background: #f0f8ff;
 }
 body .autenticacion .contenedorLogin .creaCuenta form .form_content .submit {
   margin-top: 22px;
@@ -918,9 +921,9 @@ body .autenticacion .contenedorLogin .creaCuenta form .form_content .submit inpu
   width: 100%;
 }
 body .autenticacion .formularioCrea {
-  border: 1px solid #f8b302;
-  -webkit-border-radius: 1em;
-  border-radius: 1em;
+  border: 1px solid #ecedef;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
   margin: 0 auto;
   width: 80%;
 }
@@ -932,44 +935,75 @@ body .autenticacion .formularioCrea .creaCuenta h3 {
   font-size: 18px;
   text-align: center;
 }
-body .autenticacion .formularioCrea .creaCuenta .apellido,
-body .autenticacion .formularioCrea .creaCuenta .correo,
-body .autenticacion .formularioCrea .creaCuenta .nombre,
-body .autenticacion .formularioCrea .creaCuenta .password {
-  margin: 25px 0;
+body .autenticacion .formularioCrea .creaCuenta .nombreApellido {
+  border-bottom: 1px solid #f8b302;
+  border-top: 1px solid #f8b302;
 }
-body .autenticacion .formularioCrea .creaCuenta .apellido input,
-body .autenticacion .formularioCrea .creaCuenta .correo input,
-body .autenticacion .formularioCrea .creaCuenta .nombre input,
-body .autenticacion .formularioCrea .creaCuenta .password input {
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  width: 69%;
-}
-body .autenticacion .formularioCrea .creaCuenta .apellido input,
-body .autenticacion .formularioCrea .creaCuenta .correo input,
-body .autenticacion .formularioCrea .creaCuenta .nombre input,
-body .autenticacion .formularioCrea .creaCuenta .password input,
-body .autenticacion .formularioCrea .creaCuenta .apellido label,
-body .autenticacion .formularioCrea .creaCuenta .correo label,
-body .autenticacion .formularioCrea .creaCuenta .nombre label,
-body .autenticacion .formularioCrea .creaCuenta .password label {
+body .autenticacion .formularioCrea .creaCuenta .nombreApellido .apellido,
+body .autenticacion .formularioCrea .creaCuenta .nombreApellido .nombre {
   display: inline-block;
   vertical-align: middle;
+  width: 49%;
 }
-body .autenticacion .formularioCrea .creaCuenta .apellido label,
+body .autenticacion .formularioCrea .creaCuenta .nombreApellido .apellido input,
+body .autenticacion .formularioCrea .creaCuenta .nombreApellido .nombre input {
+  border: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #999;
+  font-size: 16px;
+  outline: none;
+  padding: 5px;
+  width: 100%;
+}
+body .autenticacion .formularioCrea .creaCuenta .nombreApellido .apellido input:focus,
+body .autenticacion .formularioCrea .creaCuenta .nombreApellido .nombre input:focus {
+  background: #f0f8ff;
+}
+body .autenticacion .formularioCrea .creaCuenta .nombreApellido .apellido label,
+body .autenticacion .formularioCrea .creaCuenta .nombreApellido .nombre label {
+  color: #434142;
+  display: block;
+  text-align: left;
+}
+body .autenticacion .formularioCrea .creaCuenta .correo,
+body .autenticacion .formularioCrea .creaCuenta .password {
+  border-bottom: 1px solid #f8b302;
+  border-top: 1px solid #f8b302;
+  margin: 25px 0;
+}
+body .autenticacion .formularioCrea .creaCuenta .correo input,
+body .autenticacion .formularioCrea .creaCuenta .password input {
+  border: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #999;
+  font-size: 16px;
+  outline: none;
+  padding: 5px;
+  width: 100%;
+}
+body .autenticacion .formularioCrea .creaCuenta .correo input:focus,
+body .autenticacion .formularioCrea .creaCuenta .password input:focus {
+  background: #f0f8ff;
+}
 body .autenticacion .formularioCrea .creaCuenta .correo label,
-body .autenticacion .formularioCrea .creaCuenta .nombre label,
 body .autenticacion .formularioCrea .creaCuenta .password label {
+  display: block;
+  color: #434142;
   font-size: 13px;
-  text-align: right;
+  text-align: left;
   width: 28%;
 }
-body .autenticacion .formularioCrea .creaCuenta .apellido label sup,
-body .autenticacion .formularioCrea .creaCuenta .correo label sup,
-body .autenticacion .formularioCrea .creaCuenta .nombre label sup,
-body .autenticacion .formularioCrea .creaCuenta .password label sup {
-  color: #f00;
+body .autenticacion .formularioCrea .creaCuenta .correo .condicionPass,
+body .autenticacion .formularioCrea .creaCuenta .password .condicionPass {
+  color: #434142;
+  display: block;
+  font-size: 11px;
+  font-style: italic;
+  text-align: right;
 }
 body .autenticacion .formularioCrea .creaCuenta .checkbox label {
   width: 69%;
@@ -996,33 +1030,48 @@ body .autenticacion .formularioCrea .creaCuenta .fechaNacimiento label {
   display: block;
   font-weight: 600;
   text-align: center;
-  text-transform: uppercase;
+}
+body .autenticacion .formularioCrea .creaCuenta .fechaNacimiento .contenedorFecha {
+  border-bottom: 1px solid #f8b302;
+  border-top: 1px solid #f8b302;
+  margin: 0 auto;
+  width: 70%;
 }
 body .autenticacion .formularioCrea .creaCuenta .fechaNacimiento .contenedorFecha .selectorFecha {
   display: inline-block;
   text-align: center;
   width: 32%;
 }
-body .autenticacion .formularioCrea .creaCuenta .fechaNacimiento .contenedorFecha .selectorFecha select {
+body .autenticacion .formularioCrea .creaCuenta .fechaNacimiento .contenedorFecha .selectorFecha .selector {
+  width: 100% !important;
+}
+body .autenticacion .formularioCrea .creaCuenta .fechaNacimiento .contenedorFecha .selectorFecha .selector select {
   background: none;
-  border: 1px solid #999;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
+  border: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #999;
+  font-size: 13px;
   height: 27px;
   left: 0px;
+  outline: 0;
+  padding: 5px;
   text-align: center;
   top: 0px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
   width: 100%;
 }
-body .autenticacion .formularioCrea .creaCuenta .fechaNacimiento .contenedorFecha .selectorFecha span {
-  display: none;
+body .autenticacion .formularioCrea .creaCuenta .fechaNacimiento .contenedorFecha .selectorFecha .selector select:hover {
+  background: #f8b302;
+  color: #fff;
 }
-body .autenticacion .formularioCrea .creaCuenta .password .condicionPass {
-  display: block;
-  font-size: 13px;
-  font-style: italic;
-  text-align: right;
-  width: 28%;
+body .autenticacion .formularioCrea .creaCuenta .fechaNacimiento .contenedorFecha .selectorFecha .selector span {
+  display: none;
 }
 body .autenticacion .formularioCrea .creaCuenta .srSra {
   display: none;
@@ -4739,8 +4788,8 @@ td .sale-box {
   -ms-animation-name: anim-close;
   animation-name: anim-close;
 }
-.placeholder {
-  color: #999;
+.my-placeholder {
+  color: #ccc;
 }
 @-moz-keyframes anim-open {
   0% {
