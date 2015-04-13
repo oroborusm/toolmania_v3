@@ -885,8 +885,6 @@ body .autenticacion .contenedorLogin .creaCuenta form .form_content .form-group 
   font-size: 15px;
 }
 body .autenticacion .contenedorLogin .creaCuenta form .form_content .form-group input {
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
   display: block;
   width: 100%;
 }

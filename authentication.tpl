@@ -62,7 +62,7 @@
 							<div class="alerta" id="create_account_error" style="display:none"></div>
 							<div class="form-group">
 								<label for="email_create">{l s='Email address'}</label>
-								<input type="text" class="is_required validate account_input form-control" data-validate="isEmail" id="email_create" name="email_create" value="{if isset($smarty.post.email_create)}{$smarty.post.email_create|stripslashes}{/if}" />
+								<input type="text" class="is_required validate account_input form-control" data-validate="isEmail" id="email_create" name="email_create" value="{if isset($smarty.post.email_create)}{$smarty.post.email_create|stripslashes}{/if}" placeholder="Ingrese su correo" />
 							</div>
 							<div class="submit">
 								{if isset($back)}<input type="hidden" class="hidden" name="back" value="{$back|escape:'html':'UTF-8'}" />{/if}
