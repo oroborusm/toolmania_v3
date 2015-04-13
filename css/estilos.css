@@ -879,15 +879,24 @@ body .autenticacion .contenedorLogin .creaCuenta form .form_content p {
   margin: 0;
 }
 body .autenticacion .contenedorLogin .creaCuenta form .form_content .form-group {
+  border-bottom: 1px solid #f8b302;
+  border-top: 1px solid #f8b302;
   margin: 5px 0;
 }
 body .autenticacion .contenedorLogin .creaCuenta form .form_content .form-group label {
-  font-size: 15px;
+  color: #434142;
+  display: block;
+  font-size: 13px;
+  text-align: left;
 }
 body .autenticacion .contenedorLogin .creaCuenta form .form_content .form-group input {
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
+  border: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   display: block;
+  outline: none;
+  padding: 3px;
   width: 100%;
 }
 body .autenticacion .contenedorLogin .creaCuenta form .form_content .submit {
@@ -1016,6 +1025,7 @@ body .autenticacion .formularioCrea .creaCuenta .password .condicionPass {
   width: 28%;
 }
 body .autenticacion .formularioCrea .creaCuenta .srSra {
+  display: none;
   text-align: center;
 }
 body .autenticacion .formularioCrea .creaCuenta .srSra .tratoGenero {
@@ -4728,6 +4738,9 @@ td .sale-box {
   -o-animation-name: anim-close;
   -ms-animation-name: anim-close;
   animation-name: anim-close;
+}
+.placeholder {
+  color: #999;
 }
 @-moz-keyframes anim-open {
   0% {

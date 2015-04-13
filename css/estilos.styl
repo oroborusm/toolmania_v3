@@ -785,12 +785,21 @@ body
 					.form_content
 						//aca estaba el alerta
 						.form-group
+							border-bottom 1px solid naranjito
+							border-top 1px solid naranjito
 							margin 5px 0
 							label
-								font-size 15px
-							input
-								border-radius 5px
+								color oscuro
 								display block
+								font-size 13px
+								text-align left
+							input
+								//border-radius 5px
+								border none
+								box-sizing border-box
+								display block
+								outline none
+								padding 3px
 								width 100%
 						.submit
 							margin-top 22px
@@ -896,6 +905,7 @@ body
 						text-align right
 						width 28%
 				.srSra
+					display none
 					text-align center
 					.tratoGenero
 						color oscuro
@@ -4123,4 +4133,9 @@ td
 @keyframes anim-close {
 	0% { opacity: 1; }
 	100% { opacity: 0; transform: scale3d(0.9, 0.9, 1); }
+}
+
+
+.placeholder{
+  color: #999;
 }
