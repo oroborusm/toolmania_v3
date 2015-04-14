@@ -1075,6 +1075,10 @@ body .autenticacion .formularioCrea .creaCuenta .fechaNacimiento .contenedorFech
   background: #f8b302;
   color: #fff;
 }
+body .autenticacion .formularioCrea .creaCuenta .fechaNacimiento .contenedorFecha .selectorFecha .selector select option {
+  background: #fff;
+  color: #434142;
+}
 body .autenticacion .formularioCrea .creaCuenta .fechaNacimiento .contenedorFecha .selectorFecha .selector span {
   display: none;
 }
