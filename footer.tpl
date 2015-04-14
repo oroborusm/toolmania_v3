@@ -122,8 +122,10 @@
 		    }
 		})
 
+		$('input, textarea').placeholder();
 	</script>
     </div>
+
 
 
 	</body>

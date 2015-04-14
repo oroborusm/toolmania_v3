@@ -455,7 +455,7 @@
 					</div>
 					<div class="required password form-group">
 						<label for="passwd">{l s='Password'}</label>
-						<input type="password" class="is_required validate form-control" data-validate="isPasswd" name="password" id="passwd" placeholder="Ingresa tu contraseña" required/>
+						<input type="password" class="is_required validate form-control" data-validate="isPasswd" name="passwd" id="passwd" placeholder="Ingresa tu contraseña" required/>
 						<span class="form_info condicionPass">{l s='(Five characters minimum)'}</span>
 					</div>
 					<div class="form-group fechaNacimiento">

@@ -59,5 +59,7 @@ $(function(){
 	//     }
 	//   })
 	// });
-	$('input, textarea').placeholder({customClass: 'my-placeholder'});
+
+
+	//$('input, textarea').placeholder({customClass: 'my-placeholder'});
 });
