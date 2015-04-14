@@ -56,6 +56,7 @@
 
 {if isset($blockcart_top) && $blockcart_top}
 <div class="carrito clearfix{if $PS_CATALOG_MODE} header_user_catalog{/if}">
+	<div class="carritoIcon"></div>
 	<span class="ajax_cart_quantity{if $cart_qties == 0} unvisible{/if}">{$cart_qties}</span>
 	<span class="ajax_cart_no_product{if $cart_qties > 0} unvisible{/if}">0</span>
 {/if}

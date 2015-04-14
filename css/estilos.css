@@ -338,9 +338,9 @@ body header .header .carrito {
   -ms-transition: 0.3s;
   transition: 0.3s;
   width: 110px;
-  z-index: 100000;
+  z-index: 2147483647;
 }
-body header .header .carrito:before {
+body header .header .carrito .carritoIcon:before {
   color: #fff;
   content: "\e601";
   display: block;
