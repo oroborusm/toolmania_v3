@@ -350,6 +350,7 @@ body header .header .carrito:before {
   left: 0;
   line-height: 50px;
   position: absolute;
+  text-align: center;
   top: 0;
   width: 110px;
 }
@@ -653,9 +654,11 @@ body header .header .loginUsuario {
   width: 110px;
 }
 body header .header .loginUsuario .contenedorLogin {
+  display: block;
   height: 50px;
   position: relative;
   width: 100%;
+  z-index: 2147483647;
 }
 body header .header .loginUsuario .contenedorLogin:hover .accedeCuenta {
   display: block;
@@ -719,6 +722,7 @@ body header .header .loginUsuario .contenedorLogin .login {
   display: block;
   font-size: 13px;
   line-height: 50px;
+  width: 100%;
 }
 body header .header .loginUsuario .contenedorLogin .logout {
   color: #434142;
