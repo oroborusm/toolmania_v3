@@ -332,7 +332,8 @@ body
 							vertical-align top
 			.carrito
 				//background #f8b302
-				background #003F3F
+				//background #003F3F
+				background oscuro
 				//background naranjito
 				//float right
 				height 50px
@@ -562,6 +563,7 @@ body
 				text-align center
 				top 0
 				width 110px
+				z-index 2147483646
 				.contenedorLogin
 					display block
 					height 50px
@@ -616,6 +618,8 @@ body
 							line-height 15px
 							text-decoration none
 					.login
+						background white
+						//border 1px solid transparent
 						color oscuro
 						display block
 						font-size 13px
@@ -1085,11 +1089,9 @@ body
 							box-sizing border-box
 							margin 0 auto
 							outline none
-							width 50%
+							width 100%
 							&:focus
 								background aliceblue
-				.esPostcode
-					display none
 				.esAliasDireccion
 					float right
 					margin 5px 0
@@ -1102,7 +1104,17 @@ body
 				// 	vertical-align top
 				// 	width 49%
 				.esRegion
-					display block !important
+					select
+						background #fbfbfb
+						border none
+						box-sizing border-box
+						margin 0 auto
+						outline none
+						width 100%
+						&:focus
+							background aliceblue
+					span
+						display none
 				.infoAdicional
 					//border-bottom 1px solid naranjito
 					float left

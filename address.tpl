@@ -118,12 +118,12 @@
 					</div>
 					{* if customer hasn't update his layout address, country has to be verified but it's deprecated *}
 				{/if}
-				<!-- {if $field_name eq 'Country:name' || $field_name eq 'country'}
+				{if $field_name eq 'Country:name' || $field_name eq 'country'}
 					<div class="form-group esPais">
 						<label for="id_country">{l s='Country'}</label>
 						<select id="id_country" class="form-control" name="id_country">{$countries_list}</select>
 					</div>
-				{/if} como solo seleccionaba chile, se borro-->
+				{/if}<!-- como solo seleccionaba chile, se borro -->
 				{if $field_name eq 'State:name'}
 					{assign var="stateExist" value=true}
 					<div class="esRegion form-group">
@@ -136,7 +136,7 @@
 				{if $field_name eq 'phone'}
 					{assign var="homePhoneExist" value=true}
 					<div class="form-group esTelefono">
-						<label for="phone">{l s='Home phone'}{if isset($one_phone_at_least) && $one_phone_at_least} <sup>**</sup>{/if}</label>
+						<label for="phone">{l s='Home phone'}{if isset($one_phone_at_least) && $one_phone_at_least}{/if}</label>
 						<input class="{if isset($one_phone_at_least) && $one_phone_at_least}is_required{/if} validate form-control" data-validate="{$address_validation.phone.validate}" type="tel" id="phone" name="phone" value="{if isset($smarty.post.phone)}{$smarty.post.phone}{else}{if isset($address->phone)}{$address->phone|escape:'html':'UTF-8'}{/if}{/if}"  required/>
 					</div>
 					<!-- {if isset($one_phone_at_least) && $one_phone_at_least}
@@ -148,14 +148,14 @@
 				{if $field_name eq 'phone_mobile'}
 					{assign var="mobilePhoneExist" value=true}
 					<div class="{if isset($one_phone_at_least) && $one_phone_at_least}{/if}form-group esCelular">
-						<label for="phone_mobile">{l s='Mobile phone'}{if isset($one_phone_at_least) && $one_phone_at_least} <sup>**</sup>{/if}</label>
+						<label for="phone_mobile">{l s='Mobile phone'}{if isset($one_phone_at_least) && $one_phone_at_least}{/if}</label>
 						<input class="validate form-control" data-validate="{$address_validation.phone_mobile.validate}" type="tel" id="phone_mobile" name="phone_mobile" value="{if isset($smarty.post.phone_mobile)}{$smarty.post.phone_mobile}{else}{if isset($address->phone_mobile)}{$address->phone_mobile|escape:'html':'UTF-8'}{/if}{/if}" />
 					</div>
 				{/if}
 			{/foreach}	
 		
 			{if !$postCodeExist}
-				<div class="required postcode form-group unvisible">
+				<div class="required esPostcode form-group unvisible">
 					<label for="postcode">{l s='Zip/Postal Code'}</label>
 					<input class="is_required validate form-control" data-validate="{$address_validation.postcode.validate}" type="text" id="postcode" name="postcode" value="{if isset($smarty.post.postcode)}{$smarty.post.postcode}{else}{if isset($address->postcode)}{$address->postcode|escape:'html':'UTF-8'}{/if}{/if}" />
 				</div>

@@ -341,7 +341,7 @@ body header .header .buscador .buscadorForm form input {
   vertical-align: top;
 }
 body header .header .carrito {
-  background: #003f3f;
+  background: #434142;
   height: 50px;
   position: absolute;
   right: 0;
@@ -667,6 +667,7 @@ body header .header .loginUsuario {
   text-align: center;
   top: 0;
   width: 110px;
+  z-index: 2147483646;
 }
 body header .header .loginUsuario .contenedorLogin {
   display: block;
@@ -733,6 +734,7 @@ body header .header .loginUsuario .contenedorLogin .account .texto {
   text-decoration: none;
 }
 body header .header .loginUsuario .contenedorLogin .login {
+  background: #fff;
   color: #434142;
   display: block;
   font-size: 13px;
@@ -1233,13 +1235,10 @@ body .box .rodeaAddress form .esPais .selector select {
   box-sizing: border-box;
   margin: 0 auto;
   outline: none;
-  width: 50%;
+  width: 100%;
 }
 body .box .rodeaAddress form .esPais .selector select:focus {
   background: #f0f8ff;
-}
-body .box .rodeaAddress form .esPostcode {
-  display: none;
 }
 body .box .rodeaAddress form .esAliasDireccion {
   float: right;
@@ -1248,8 +1247,21 @@ body .box .rodeaAddress form .esAliasDireccion {
   padding: 5px 0;
   width: 48%;
 }
-body .box .rodeaAddress form .esRegion {
-  display: block !important;
+body .box .rodeaAddress form .esRegion select {
+  background: #fbfbfb;
+  border: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 auto;
+  outline: none;
+  width: 100%;
+}
+body .box .rodeaAddress form .esRegion select:focus {
+  background: #f0f8ff;
+}
+body .box .rodeaAddress form .esRegion span {
+  display: none;
 }
 body .box .rodeaAddress form .infoAdicional {
   float: left;

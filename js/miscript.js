@@ -21,7 +21,6 @@ $(function(){
 	}, 4000);
 
 
-
 	// $('input:checkbox').click(function(){
 	//    $('.esEmpresa').toggleClass('active');
 	// });
