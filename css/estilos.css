@@ -1179,22 +1179,26 @@ body .box .rodeaAddress form .addressNombreApellido .apellidoDireccion input {
   width: 100%;
 }
 body .box .rodeaAddress form .esAliasDireccion,
+body .box .rodeaAddress form .esCelular,
 body .box .rodeaAddress form .esCiudad,
 body .box .rodeaAddress form .esDireccion,
 body .box .rodeaAddress form .esDireccionDos,
 body .box .rodeaAddress form .esPais,
 body .box .rodeaAddress form .esPostcode,
+body .box .rodeaAddress form .esRegion,
 body .box .rodeaAddress form .esRutEmpresa,
 body .box .rodeaAddress form .esTelefono {
   margin: 5px 0;
   padding: 5px 0;
 }
 body .box .rodeaAddress form .esAliasDireccion label,
+body .box .rodeaAddress form .esCelular label,
 body .box .rodeaAddress form .esCiudad label,
 body .box .rodeaAddress form .esDireccion label,
 body .box .rodeaAddress form .esDireccionDos label,
 body .box .rodeaAddress form .esPais label,
 body .box .rodeaAddress form .esPostcode label,
+body .box .rodeaAddress form .esRegion label,
 body .box .rodeaAddress form .esRutEmpresa label,
 body .box .rodeaAddress form .esTelefono label {
   display: block;
@@ -1203,11 +1207,13 @@ body .box .rodeaAddress form .esTelefono label {
   text-align: left;
 }
 body .box .rodeaAddress form .esAliasDireccion input,
+body .box .rodeaAddress form .esCelular input,
 body .box .rodeaAddress form .esCiudad input,
 body .box .rodeaAddress form .esDireccion input,
 body .box .rodeaAddress form .esDireccionDos input,
 body .box .rodeaAddress form .esPais input,
 body .box .rodeaAddress form .esPostcode input,
+body .box .rodeaAddress form .esRegion input,
 body .box .rodeaAddress form .esRutEmpresa input,
 body .box .rodeaAddress form .esTelefono input {
   padding: 5px;
@@ -1241,6 +1247,9 @@ body .box .rodeaAddress form .esAliasDireccion {
   overflow: hidden;
   padding: 5px 0;
   width: 48%;
+}
+body .box .rodeaAddress form .esRegion {
+  display: block !important;
 }
 body .box .rodeaAddress form .infoAdicional {
   float: left;

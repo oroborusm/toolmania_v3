@@ -145,13 +145,13 @@
 					{/if}
 					<div class="clearfix"></div> -->
 				{/if}
-				<!-- {if $field_name eq 'phone_mobile'}
+				{if $field_name eq 'phone_mobile'}
 					{assign var="mobilePhoneExist" value=true}
-					<div class="{if isset($one_phone_at_least) && $one_phone_at_least}required {/if}form-group">
+					<div class="{if isset($one_phone_at_least) && $one_phone_at_least}{/if}form-group esCelular">
 						<label for="phone_mobile">{l s='Mobile phone'}{if isset($one_phone_at_least) && $one_phone_at_least} <sup>**</sup>{/if}</label>
 						<input class="validate form-control" data-validate="{$address_validation.phone_mobile.validate}" type="tel" id="phone_mobile" name="phone_mobile" value="{if isset($smarty.post.phone_mobile)}{$smarty.post.phone_mobile}{else}{if isset($address->phone_mobile)}{$address->phone_mobile|escape:'html':'UTF-8'}{/if}{/if}" />
 					</div>
-				{/if} -->
+				{/if}
 			{/foreach}	
 		
 			{if !$postCodeExist}
@@ -161,7 +161,8 @@
 				</div>
 			{/if}		
 			{if !$stateExist}
-				<div class="required id_state form-group unvisible">
+				<!-- <div class="required id_state form-group unvisible"> -->
+				<div class="required esRegion form-group ">
 					<label for="id_state">{l s='State'}</label>
 					<select name="id_state" id="id_state" class="form-control">
 						<option value="">-</option>
