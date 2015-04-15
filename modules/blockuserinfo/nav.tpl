@@ -21,7 +21,7 @@
 				{l s='Login' mod='blockuserinfo'}
 			</div>
 			<div class="accedeCuenta">
-				<form action="{$link->getPageLink('authentication', true)|escape:'html':'UTF-8'}" method="post" id="login_form" class="box" autocomplete="off">
+				<form action="{$link->getPageLink('authentication', true)|escape:'html':'UTF-8'}" method="post" id="login_form" class="box boxLogin" autocomplete="off">
 					<!-- <h3 class="page-subheading">{l s='Already registered?'}</h3> -->
 					<div class="form_content">
 						<div class="form-group emailLogin">

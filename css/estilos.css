@@ -660,6 +660,9 @@ body header .header .carrito > .ajax_cart_no_product {
   top: 5px;
   width: 58px;
 }
+body header .header .ie8 .loginUsuario {
+  z-index: 2147483647;
+}
 body header .header .loginUsuario {
   height: 50px;
   position: absolute;
@@ -667,7 +670,6 @@ body header .header .loginUsuario {
   text-align: center;
   top: 0;
   width: 110px;
-  z-index: 2147483646;
 }
 body header .header .loginUsuario .contenedorLogin {
   display: block;
@@ -684,9 +686,11 @@ body header .header .loginUsuario .contenedorLogin:hover .account {
 }
 body header .header .loginUsuario .contenedorLogin:hover .logout {
   left: 50%;
+  top: 0;
 }
 body header .header .loginUsuario .contenedorLogin:hover .nombre {
   left: 100%;
+  top: 0;
 }
 body header .header .loginUsuario .contenedorLogin .account,
 body header .header .loginUsuario .contenedorLogin .logout,
@@ -704,7 +708,7 @@ body header .header .loginUsuario .contenedorLogin .account {
   left: 100%;
   position: absolute;
   text-decoration: none;
-  top: 0;
+  top: -55px;
   width: 55px;
   z-index: 1;
 }
@@ -750,6 +754,7 @@ body header .header .loginUsuario .contenedorLogin .logout {
   position: absolute;
   text-align: center;
   text-decoration: none;
+  top: -55px;
   width: 55px;
 }
 body header .header .loginUsuario .contenedorLogin .logout .icono {
