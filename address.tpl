@@ -259,6 +259,6 @@
 
 <script>
 	$('input:checkbox').click(function(){
-	   $('.esEmpresa').toggleClass('active');
+	   $('.esEmpresa').toggleClass('activo');
 	});
 </script>

@@ -2874,6 +2874,9 @@ table tfoot tr td {
   border: 1px solid #aaa;
 }
 .active {
+  display: block;
+}
+.activo {
   display: block !important;
 }
 .alert-danger {
