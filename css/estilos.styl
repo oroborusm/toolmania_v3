@@ -11,6 +11,7 @@ cafoso = #211915
 rosadito = #fa524e
 naranjoCafoso = #A04B01
 naranjoClaro = #F39C02
+grisAzul = #A1A5AD
 
 
 @font-face {
@@ -62,6 +63,15 @@ naranjoClaro = #F39C02
 
 i
 	font-style normal !important
+input
+	background #fbfbfb
+	border 1px solid grisAzul
+	box-sizing border-box
+	outline none
+	&:focus
+		background aliceblue
+select
+	border 1px solid grisAzul !important
 #category-thumbnail
 .category-thumbnail
 	display none !important
@@ -308,6 +318,7 @@ body
 									font-size 1em
 									line-height 30px
 						input
+							background white
 							border none
 							border-radius .5em
 							height 30px
@@ -790,8 +801,8 @@ body
 					.form_content
 						//aca estaba el alerta
 						.form-group
-							border-bottom 1px solid naranjito
-							border-top 1px solid naranjito
+							//border-bottom 1px solid naranjito
+							// border-top 1px solid naranjito
 							margin 5px 0
 							label
 								color oscuro
@@ -800,10 +811,10 @@ body
 								text-align left
 							input
 								//border-radius 5px
-								border none
-								box-sizing border-box
+								//border none
+								//box-sizing border-box
 								display block
-								outline none
+								//outline none
 								padding 5px
 								width 100%
 								&:focus
@@ -833,19 +844,19 @@ body
 					font-size 18px
 					text-align center
 				.nombreApellido
-					border-bottom 1px solid naranjito
-					border-top 1px solid naranjito
+					//border-bottom 1px solid naranjito
+					// border-top 1px solid naranjito
 					.apellido
 					.nombre
 						display inline-block
 						vertical-align middle
 						width 49%
 						input
-							border none
-							box-sizing border-box
+							//border none
+							//box-sizing border-box
 							color #999
 							font-size 16px
-							outline none
+							//outline none
 							padding 5px
 							width 100%
 							&:focus
@@ -856,15 +867,15 @@ body
 							text-align left
 				.correo
 				.password
-					border-bottom 1px solid naranjito
-					border-top 1px solid naranjito
+					//border-bottom 1px solid naranjito
+					// border-top 1px solid naranjito
 					margin 25px 0
 					input
-						border none
-						box-sizing border-box
+						//border none
+						//box-sizing border-box
 						color #999
 						font-size 16px
-						outline none
+						//outline none
 						padding 5px
 						width 100%
 						&:focus
@@ -907,8 +918,8 @@ body
 						font-weight 600
 						text-align center
 					.contenedorFecha
-						border-bottom 1px solid naranjito
-						border-top 1px solid naranjito
+						//border-bottom 1px solid naranjito
+						// border-top 1px solid naranjito
 						margin 0 auto
 						width 70%
 						.selectorFecha
@@ -921,7 +932,7 @@ body
 									background none
 									//border 1px solid #999
 									//border-radius 5px
-									border none
+									//border none
 									box-sizing border-box
 									color #999
 									font-size 13px
@@ -933,11 +944,10 @@ body
 									padding 5px
 									text-align center
 									top 0px
-									transition .3s
 									width 100%
-									&:hover
-										background naranjito
-										color white
+									// &:hover
+									// 	background naranjito
+									// 	color white
 									option
 										background white
 										color oscuro
@@ -988,36 +998,144 @@ body
 		margin 0 auto
 		text-align center
 		width 80%
-		form
-			border 1px solid colorao
-			border-radius 5px
-			font-size 16px
-			.required
-				color oscuro
+		.rodeaAddress
+			margin 0 auto
+			width 80%
+			form
+				//border 1px solid colorao
+				border-radius 5px
 				font-size 16px
-			.form-group
-				label
-				textarea
-					border-radius 5px
-					text-align right
-					vertical-align middle
-					width 30%
-				input
-				label
-				textarea
-				.selector
-					display inline-block
-				input
-					margin 4px 0
-					width 40%
-				p
-					color red
-					font-size 13px
-				.selector
-					select
-						border-radius 5px
-					span
+				margin 0 auto
+				width 80%
+				.activaEmpresa
+					background #fbfbfb
+					border 1px solid grisAzul
+					box-sizing border-box
+					padding 5px 10px
+					text-align left
+					label
+					.checker
+						display inline-block
+						vertical-align middle
+					label
+						font-size 13px
+						font-weight 600
+						margin 0 5px 0 0
+						text-align left
+						//width 100%
+					.esEmpresa
 						display none
+						margin 5px 0
+						padding 5px 0
+						label
+							display block
+							font-size 13px
+							font-weight 600
+							text-align left
+						input
+							background white
+							padding 5px
+							width 100%
+				.addressNombreApellido
+					//border-bottom 1px solid naranjito
+					//border-top 1px solid naranjito
+					margin 5px 0
+					.nombreDireccion
+					.apellidoDireccion
+						display inline-block
+						padding 5px 0
+						vertical-align middle
+						width 49%
+						label
+							display block
+							font-size 13px
+							font-weight 600
+							text-align left
+						input
+							padding 5px
+							width 100%
+				.esAliasDireccion
+				.esCiudad
+				.esDireccion
+				.esDireccionDos
+				.esPais
+				.esPostcode
+				.esRutEmpresa
+				.esTelefono
+					margin 5px 0
+					padding 5px 0
+					label
+						display block
+						font-size 13px
+						font-weight 600
+						text-align left
+					input
+						padding 5px
+						width 100%
+				.esPais
+					.selector
+						width 100% !important
+						span
+							display none
+						select
+							background #fbfbfb
+							border none
+							box-sizing border-box
+							margin 0 auto
+							outline none
+							width 50%
+							&:focus
+								background aliceblue
+				.esPostcode
+					display none
+				.esAliasDireccion
+					float right
+					margin 5px 0
+					overflow hidden
+					padding 5px 0
+					width 48%
+				// .esAliasDireccion
+				// .infoAdicional
+				// 	display inline-block
+				// 	vertical-align top
+				// 	width 49%
+				.infoAdicional
+					//border-bottom 1px solid naranjito
+					float left
+					margin 5px 0
+					padding 5px 0
+					width 48%
+					label
+						display block
+						font-size 13px
+						font-weight 600
+						text-align left
+						width 100%
+					textarea
+						background #fbfbfb
+						border 1px solid grisAzul
+						box-sizing border-box
+						display block
+						margin 0 auto
+						outline none
+						width 100%
+						&:focus
+							background aliceblue
+				.submit2
+					display block
+					margin-top 130px
+					width 100%
+					button
+						background naranjito
+						border none
+						border-radius 5px
+						padding 8px 15px
+						transition .3s
+						&:hover
+							background naranjo
+						span
+							color white
+					
 		.correos
 		.required
 			color red
@@ -2410,7 +2528,7 @@ table
 
 
 .active
-	display block
+	display block !important
 
 
 .alert-danger
@@ -4048,18 +4166,32 @@ td
 	border 2px solid clarito
 	display none
 	margin-left -100px
+	padding 10px
 	position relative
 	z-index 1
 	form
+		width 100%
 		.form_content
 			.form-group
+				padding 5px 0
 				label
-					font-size 15px
+					display block
+					font-size 13px
+					text-align left
+					width 100%
 				input
 					border-radius 5px
 					display block
+					font-size 15px
 					width 100%
-			.creaCuenta
+					&:focus
+						background aliceblue
+			.emailLogin
+				// border-top 1px solid naranjito
+			.passwordLogin
+				// border-top 1px solid naranjito
+				//border-bottom 1px solid naranjito
+			.linkCreaCuenta
 				color oscuro
 				font-size 13px
 				margin 0
@@ -4067,10 +4199,11 @@ td
 				&:hover
 					text-decoration underline
 			.lost_password
-				font-size 13px
+				font-size 12px
 				margin 0
 				a
 					color oscuro
+					font-weight 100
 					text-decoration none
 					&:hover
 						text-decoration underline
@@ -4078,13 +4211,17 @@ td
 				margin 22px 0 0 0
 
 				button
-					background calipso
+					background clarito
 					border none
 					border-radius 5px
-					color white
+					color oscuro
 					width 100%
+					&:hover
+						background calipso
+						color white
 					span
-						line-height 40px
+						font-size 15px
+						line-height 30px
 				input
 					display block
 					width 100%
@@ -4189,3 +4326,9 @@ td
 .my-placeholder{
   color: #ccc;
 }
+
+.std
+	border 1px solid clarito
+	margin 0 auto
+	padding 18px
+	width 70%

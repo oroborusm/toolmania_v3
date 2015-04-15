@@ -29,6 +29,20 @@
 i {
   font-style: normal !important;
 }
+input {
+  background: #fbfbfb;
+  border: 1px solid #a1a5ad;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+}
+input:focus {
+  background: #f0f8ff;
+}
+select {
+  border: 1px solid #a1a5ad !important;
+}
 #category-thumbnail,
 .category-thumbnail {
   display: none !important;
@@ -313,6 +327,7 @@ body header .header .buscador .buscadorForm form button span:before {
   line-height: 30px;
 }
 body header .header .buscador .buscadorForm form input {
+  background: #fff;
   border: none;
   -webkit-border-radius: 0.5em;
   border-radius: 0.5em;
@@ -883,8 +898,6 @@ body .autenticacion .contenedorLogin .creaCuenta form .form_content p {
   margin: 0;
 }
 body .autenticacion .contenedorLogin .creaCuenta form .form_content .form-group {
-  border-bottom: 1px solid #f8b302;
-  border-top: 1px solid #f8b302;
   margin: 5px 0;
 }
 body .autenticacion .contenedorLogin .creaCuenta form .form_content .form-group label {
@@ -894,12 +907,7 @@ body .autenticacion .contenedorLogin .creaCuenta form .form_content .form-group 
   text-align: left;
 }
 body .autenticacion .contenedorLogin .creaCuenta form .form_content .form-group input {
-  border: none;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
   display: block;
-  outline: none;
   padding: 5px;
   width: 100%;
 }
@@ -939,10 +947,6 @@ body .autenticacion .formularioCrea .creaCuenta h3 {
   font-size: 18px;
   text-align: center;
 }
-body .autenticacion .formularioCrea .creaCuenta .nombreApellido {
-  border-bottom: 1px solid #f8b302;
-  border-top: 1px solid #f8b302;
-}
 body .autenticacion .formularioCrea .creaCuenta .nombreApellido .apellido,
 body .autenticacion .formularioCrea .creaCuenta .nombreApellido .nombre {
   display: inline-block;
@@ -951,13 +955,8 @@ body .autenticacion .formularioCrea .creaCuenta .nombreApellido .nombre {
 }
 body .autenticacion .formularioCrea .creaCuenta .nombreApellido .apellido input,
 body .autenticacion .formularioCrea .creaCuenta .nombreApellido .nombre input {
-  border: none;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
   color: #999;
   font-size: 16px;
-  outline: none;
   padding: 5px;
   width: 100%;
 }
@@ -973,19 +972,12 @@ body .autenticacion .formularioCrea .creaCuenta .nombreApellido .nombre label {
 }
 body .autenticacion .formularioCrea .creaCuenta .correo,
 body .autenticacion .formularioCrea .creaCuenta .password {
-  border-bottom: 1px solid #f8b302;
-  border-top: 1px solid #f8b302;
   margin: 25px 0;
 }
 body .autenticacion .formularioCrea .creaCuenta .correo input,
 body .autenticacion .formularioCrea .creaCuenta .password input {
-  border: none;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
   color: #999;
   font-size: 16px;
-  outline: none;
   padding: 5px;
   width: 100%;
 }
@@ -1041,8 +1033,6 @@ body .autenticacion .formularioCrea .creaCuenta .fechaNacimiento label {
   text-align: center;
 }
 body .autenticacion .formularioCrea .creaCuenta .fechaNacimiento .contenedorFecha {
-  border-bottom: 1px solid #f8b302;
-  border-top: 1px solid #f8b302;
   margin: 0 auto;
   width: 70%;
 }
@@ -1056,7 +1046,6 @@ body .autenticacion .formularioCrea .creaCuenta .fechaNacimiento .contenedorFech
 }
 body .autenticacion .formularioCrea .creaCuenta .fechaNacimiento .contenedorFecha .selectorFecha .selector select {
   background: none;
-  border: none;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -1068,16 +1057,7 @@ body .autenticacion .formularioCrea .creaCuenta .fechaNacimiento .contenedorFech
   padding: 5px;
   text-align: center;
   top: 0px;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -o-transition: 0.3s;
-  -ms-transition: 0.3s;
-  transition: 0.3s;
   width: 100%;
-}
-body .autenticacion .formularioCrea .creaCuenta .fechaNacimiento .contenedorFecha .selectorFecha .selector select:hover {
-  background: #f8b302;
-  color: #fff;
 }
 body .autenticacion .formularioCrea .creaCuenta .fechaNacimiento .contenedorFecha .selectorFecha .selector select option {
   background: #fff;
@@ -1129,44 +1109,188 @@ body .box {
   text-align: center;
   width: 80%;
 }
-body .box form {
-  border: 1px solid #f4714a;
+body .box .rodeaAddress {
+  margin: 0 auto;
+  width: 80%;
+}
+body .box .rodeaAddress form {
   -webkit-border-radius: 5px;
   border-radius: 5px;
   font-size: 16px;
+  margin: 0 auto;
+  width: 80%;
 }
-body .box form .required {
-  color: #434142;
-  font-size: 16px;
+body .box .rodeaAddress form .activaEmpresa {
+  background: #fbfbfb;
+  border: 1px solid #a1a5ad;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  text-align: left;
 }
-body .box form .form-group label,
-body .box form .form-group textarea {
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  text-align: right;
-  vertical-align: middle;
-  width: 30%;
-}
-body .box form .form-group input,
-body .box form .form-group label,
-body .box form .form-group textarea,
-body .box form .form-group .selector {
+body .box .rodeaAddress form .activaEmpresa label,
+body .box .rodeaAddress form .activaEmpresa .checker {
   display: inline-block;
+  vertical-align: middle;
 }
-body .box form .form-group input {
-  margin: 4px 0;
-  width: 40%;
-}
-body .box form .form-group p {
-  color: #f00;
+body .box .rodeaAddress form .activaEmpresa label {
   font-size: 13px;
+  font-weight: 600;
+  margin: 0 5px 0 0;
+  text-align: left;
 }
-body .box form .form-group .selector select {
+body .box .rodeaAddress form .activaEmpresa .esEmpresa {
+  display: none;
+  margin: 5px 0;
+  padding: 5px 0;
+}
+body .box .rodeaAddress form .activaEmpresa .esEmpresa label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: left;
+}
+body .box .rodeaAddress form .activaEmpresa .esEmpresa input {
+  background: #fff;
+  padding: 5px;
+  width: 100%;
+}
+body .box .rodeaAddress form .addressNombreApellido {
+  margin: 5px 0;
+}
+body .box .rodeaAddress form .addressNombreApellido .nombreDireccion,
+body .box .rodeaAddress form .addressNombreApellido .apellidoDireccion {
+  display: inline-block;
+  padding: 5px 0;
+  vertical-align: middle;
+  width: 49%;
+}
+body .box .rodeaAddress form .addressNombreApellido .nombreDireccion label,
+body .box .rodeaAddress form .addressNombreApellido .apellidoDireccion label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: left;
+}
+body .box .rodeaAddress form .addressNombreApellido .nombreDireccion input,
+body .box .rodeaAddress form .addressNombreApellido .apellidoDireccion input {
+  padding: 5px;
+  width: 100%;
+}
+body .box .rodeaAddress form .esAliasDireccion,
+body .box .rodeaAddress form .esCiudad,
+body .box .rodeaAddress form .esDireccion,
+body .box .rodeaAddress form .esDireccionDos,
+body .box .rodeaAddress form .esPais,
+body .box .rodeaAddress form .esPostcode,
+body .box .rodeaAddress form .esRutEmpresa,
+body .box .rodeaAddress form .esTelefono {
+  margin: 5px 0;
+  padding: 5px 0;
+}
+body .box .rodeaAddress form .esAliasDireccion label,
+body .box .rodeaAddress form .esCiudad label,
+body .box .rodeaAddress form .esDireccion label,
+body .box .rodeaAddress form .esDireccionDos label,
+body .box .rodeaAddress form .esPais label,
+body .box .rodeaAddress form .esPostcode label,
+body .box .rodeaAddress form .esRutEmpresa label,
+body .box .rodeaAddress form .esTelefono label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: left;
+}
+body .box .rodeaAddress form .esAliasDireccion input,
+body .box .rodeaAddress form .esCiudad input,
+body .box .rodeaAddress form .esDireccion input,
+body .box .rodeaAddress form .esDireccionDos input,
+body .box .rodeaAddress form .esPais input,
+body .box .rodeaAddress form .esPostcode input,
+body .box .rodeaAddress form .esRutEmpresa input,
+body .box .rodeaAddress form .esTelefono input {
+  padding: 5px;
+  width: 100%;
+}
+body .box .rodeaAddress form .esPais .selector {
+  width: 100% !important;
+}
+body .box .rodeaAddress form .esPais .selector span {
+  display: none;
+}
+body .box .rodeaAddress form .esPais .selector select {
+  background: #fbfbfb;
+  border: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 auto;
+  outline: none;
+  width: 50%;
+}
+body .box .rodeaAddress form .esPais .selector select:focus {
+  background: #f0f8ff;
+}
+body .box .rodeaAddress form .esPostcode {
+  display: none;
+}
+body .box .rodeaAddress form .esAliasDireccion {
+  float: right;
+  margin: 5px 0;
+  overflow: hidden;
+  padding: 5px 0;
+  width: 48%;
+}
+body .box .rodeaAddress form .infoAdicional {
+  float: left;
+  margin: 5px 0;
+  padding: 5px 0;
+  width: 48%;
+}
+body .box .rodeaAddress form .infoAdicional label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: left;
+  width: 100%;
+}
+body .box .rodeaAddress form .infoAdicional textarea {
+  background: #fbfbfb;
+  border: 1px solid #a1a5ad;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  margin: 0 auto;
+  outline: none;
+  width: 100%;
+}
+body .box .rodeaAddress form .infoAdicional textarea:focus {
+  background: #f0f8ff;
+}
+body .box .rodeaAddress form .submit2 {
+  display: block;
+  margin-top: 130px;
+  width: 100%;
+}
+body .box .rodeaAddress form .submit2 button {
+  background: #f8b302;
+  border: none;
   -webkit-border-radius: 5px;
   border-radius: 5px;
+  padding: 8px 15px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
 }
-body .box form .form-group .selector span {
-  display: none;
+body .box .rodeaAddress form .submit2 button:hover {
+  background: #ff6b00;
+}
+body .box .rodeaAddress form .submit2 button span {
+  color: #fff;
 }
 body .box .correos,
 body .box .required {
@@ -2750,7 +2874,7 @@ table tfoot tr td {
   border: 1px solid #aaa;
 }
 .active {
-  display: block;
+  display: block !important;
 }
 .alert-danger {
   background: #f4714a;
@@ -4649,33 +4773,48 @@ td .sale-box {
   border: 2px solid #ecedef;
   display: none;
   margin-left: -100px;
+  padding: 10px;
   position: relative;
   z-index: 1;
 }
+.accedeCuenta form {
+  width: 100%;
+}
+.accedeCuenta form .form_content .form-group {
+  padding: 5px 0;
+}
 .accedeCuenta form .form_content .form-group label {
-  font-size: 15px;
+  display: block;
+  font-size: 13px;
+  text-align: left;
+  width: 100%;
 }
 .accedeCuenta form .form_content .form-group input {
   -webkit-border-radius: 5px;
   border-radius: 5px;
   display: block;
+  font-size: 15px;
   width: 100%;
 }
-.accedeCuenta form .form_content .creaCuenta {
+.accedeCuenta form .form_content .form-group input:focus {
+  background: #f0f8ff;
+}
+.accedeCuenta form .form_content .linkCreaCuenta {
   color: #434142;
   font-size: 13px;
   margin: 0;
   text-decoration: none;
 }
-.accedeCuenta form .form_content .creaCuenta:hover {
+.accedeCuenta form .form_content .linkCreaCuenta:hover {
   text-decoration: underline;
 }
 .accedeCuenta form .form_content .lost_password {
-  font-size: 13px;
+  font-size: 12px;
   margin: 0;
 }
 .accedeCuenta form .form_content .lost_password a {
   color: #434142;
+  font-weight: 100;
   text-decoration: none;
 }
 .accedeCuenta form .form_content .lost_password a:hover {
@@ -4685,15 +4824,20 @@ td .sale-box {
   margin: 22px 0 0 0;
 }
 .accedeCuenta form .form_content .submit button {
-  background: #099;
+  background: #ecedef;
   border: none;
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  color: #fff;
+  color: #434142;
   width: 100%;
 }
+.accedeCuenta form .form_content .submit button:hover {
+  background: #099;
+  color: #fff;
+}
 .accedeCuenta form .form_content .submit button span {
-  line-height: 40px;
+  font-size: 15px;
+  line-height: 30px;
 }
 .accedeCuenta form .form_content .submit input {
   display: block;
@@ -4803,6 +4947,12 @@ td .sale-box {
 }
 .my-placeholder {
   color: #ccc;
+}
+.std {
+  border: 1px solid #ecedef;
+  margin: 0 auto;
+  padding: 18px;
+  width: 70%;
 }
 @-moz-keyframes anim-open {
   0% {

@@ -21,6 +21,10 @@ $(function(){
 	}, 4000);
 
 
+
+	// $('input:checkbox').click(function(){
+	//    $('.esEmpresa').toggleClass('active');
+	// });
 	// setTimeout(function() {
 	// 	$('.dialog').addClass('dialog--open');
 	// }, 5000);
@@ -32,4 +36,5 @@ $(function(){
 
 
 	//$('input, textarea').placeholder({customClass: 'my-placeholder'});
+
 });
