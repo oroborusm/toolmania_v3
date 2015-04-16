@@ -683,14 +683,14 @@ body header .header .loginUsuario .contenedorLogin:hover .accedeCuenta {
 }
 body header .header .loginUsuario .contenedorLogin:hover .account {
   left: 0;
+  top: 0;
 }
 body header .header .loginUsuario .contenedorLogin:hover .logout {
   left: 50%;
   top: 0;
 }
 body header .header .loginUsuario .contenedorLogin:hover .nombre {
-  left: 100%;
-  top: 0;
+  top: -100%;
 }
 body header .header .loginUsuario .contenedorLogin .account,
 body header .header .loginUsuario .contenedorLogin .logout,
@@ -705,7 +705,7 @@ body header .header .loginUsuario .contenedorLogin .account {
   color: #434142;
   height: 50px;
   line-height: normal;
-  left: 100%;
+  left: 0;
   position: absolute;
   text-decoration: none;
   top: -55px;
@@ -748,7 +748,7 @@ body header .header .loginUsuario .contenedorLogin .login {
 body header .header .loginUsuario .contenedorLogin .logout {
   color: #434142;
   display: block;
-  left: 100%;
+  left: 50%;
   height: 55px;
   margin: 0;
   position: absolute;
