@@ -162,7 +162,7 @@
 			{/if}		
 			{if !$stateExist}
 				<!-- <div class="required id_state form-group unvisible"> -->
-				<div class="required esRegion form-group ">
+				<div class="esRegion form-group ">
 					<label for="id_state">{l s='State'}</label>
 					<select name="id_state" id="id_state" class="form-control">
 						<option value="">-</option>
