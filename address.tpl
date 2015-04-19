@@ -81,13 +81,13 @@
 					<div class="addressNombreApellido">
 						<div class="nombreDireccion">
 							<label for="firstname">{l s='First name'} </label>
-							<input class="is_required validate form-control" data-validate="{$address_validation.$field_name.validate}" type="text" name="firstname" id="firstname" value="{if isset($smarty.post.firstname)}{$smarty.post.firstname}{else}{if isset($address->firstname)}{$address->firstname|escape:'html':'UTF-8'}{/if}{/if}" required/>
+							<input class="is_required validate form-control" data-validate="{$address_validation.$field_name.validate}" type="text" name="firstname" id="firstname" value="{if isset($smarty.post.firstname)}{$smarty.post.firstname}{else}{if isset($address->firstname)}{$address->firstname|escape:'html':'UTF-8'}{/if}{/if}"/>
 						</div>
 					{/if}
 					{if $field_name eq 'lastname'}
 						<div class="apellidoDireccion">
 							<label for="lastname">{l s='Last name'}</label>
-							<input class="is_required validate form-control" data-validate="{$address_validation.$field_name.validate}" type="text" id="lastname" name="lastname" value="{if isset($smarty.post.lastname)}{$smarty.post.lastname}{else}{if isset($address->lastname)}{$address->lastname|escape:'html':'UTF-8'}{/if}{/if}" required/>
+							<input class="is_required validate form-control" data-validate="{$address_validation.$field_name.validate}" type="text" id="lastname" name="lastname" value="{if isset($smarty.post.lastname)}{$smarty.post.lastname}{else}{if isset($address->lastname)}{$address->lastname|escape:'html':'UTF-8'}{/if}{/if}"/>
 						</div>
 					</div>
 				{/if}
@@ -137,7 +137,7 @@
 					{assign var="homePhoneExist" value=true}
 					<div class="form-group esTelefono">
 						<label for="phone">{l s='Home phone'}{if isset($one_phone_at_least) && $one_phone_at_least}{/if}</label>
-						<input class="{if isset($one_phone_at_least) && $one_phone_at_least}is_required{/if} validate form-control" data-validate="{$address_validation.phone.validate}" type="tel" id="phone" name="phone" value="{if isset($smarty.post.phone)}{$smarty.post.phone}{else}{if isset($address->phone)}{$address->phone|escape:'html':'UTF-8'}{/if}{/if}"  required/>
+						<input class="{if isset($one_phone_at_least) && $one_phone_at_least}is_required{/if} validate form-control" data-validate="{$address_validation.phone.validate}" type="tel" id="phone" name="phone" value="{if isset($smarty.post.phone)}{$smarty.post.phone}{else}{if isset($address->phone)}{$address->phone|escape:'html':'UTF-8'}{/if}{/if}"/>
 					</div>
 					<!-- {if isset($one_phone_at_least) && $one_phone_at_least}
 						{assign var="atLeastOneExists" value=true}
