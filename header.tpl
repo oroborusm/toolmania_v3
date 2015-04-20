@@ -95,7 +95,7 @@
 			</div>
 		{/if}
 
-		{if $logged}
+		<!-- {if $logged}
 		  <div id="somedialog" class="dialog" style="display:none;">
 		  </div>
 		{else}
@@ -114,10 +114,10 @@
 				</div>
 				</div>
 			{/if}
-		{/if}
+		{/if} -->
 
 		<header>
-			<button data-dialog="somedialog" class="trigger">Open Dialog</button>
+			<!-- <button data-dialog="somedialog" class="trigger">Open Dialog</button> -->
 			<div class="header">
 				<figure>
 					<a href="{$base_dir}" title="{$shop_name|escape:'html':'UTF-8'}">
