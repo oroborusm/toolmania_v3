@@ -43,6 +43,9 @@ input:focus {
 select {
   border: 1px solid #a1a5ad !important;
 }
+fieldset {
+  border: none;
+}
 #category-thumbnail,
 .category-thumbnail {
   display: none !important;
@@ -787,6 +790,7 @@ body header .header .loginUsuario .contenedorLogin .nombre {
   height: 55px;
   line-height: normal;
   left: 0;
+  overflow: hidden;
   position: absolute;
   top: 0;
   width: 100%;
@@ -1033,46 +1037,6 @@ body .autenticacion .formularioCrea .creaCuenta .checkbox .checker {
 body .autenticacion .formularioCrea .creaCuenta .checkboxArriba {
   margin-top: 30px;
 }
-body .autenticacion .formularioCrea .creaCuenta .fechaNacimiento label {
-  color: #434142;
-  display: block;
-  font-weight: 600;
-  text-align: center;
-}
-body .autenticacion .formularioCrea .creaCuenta .fechaNacimiento .contenedorFecha {
-  margin: 0 auto;
-  width: 70%;
-}
-body .autenticacion .formularioCrea .creaCuenta .fechaNacimiento .contenedorFecha .selectorFecha {
-  display: inline-block;
-  text-align: center;
-  width: 32%;
-}
-body .autenticacion .formularioCrea .creaCuenta .fechaNacimiento .contenedorFecha .selectorFecha .selector {
-  width: 100% !important;
-}
-body .autenticacion .formularioCrea .creaCuenta .fechaNacimiento .contenedorFecha .selectorFecha .selector select {
-  background: none;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  color: #999;
-  font-size: 13px;
-  height: 27px;
-  left: 0px;
-  outline: 0;
-  padding: 5px;
-  text-align: center;
-  top: 0px;
-  width: 100%;
-}
-body .autenticacion .formularioCrea .creaCuenta .fechaNacimiento .contenedorFecha .selectorFecha .selector select option {
-  background: #fff;
-  color: #434142;
-}
-body .autenticacion .formularioCrea .creaCuenta .fechaNacimiento .contenedorFecha .selectorFecha .selector span {
-  display: none;
-}
 body .autenticacion .formularioCrea .creaCuenta .srSra {
   display: none;
   text-align: center;
@@ -1188,9 +1152,11 @@ body .box .rodeaAddress form .addressNombreApellido .apellidoDireccion input {
 body .box .rodeaAddress form .esAliasDireccion,
 body .box .rodeaAddress form .esCelular,
 body .box .rodeaAddress form .esCiudad,
+body .box .rodeaAddress form .esCorreo,
 body .box .rodeaAddress form .esDireccion,
 body .box .rodeaAddress form .esDireccionDos,
 body .box .rodeaAddress form .esPais,
+body .box .rodeaAddress form .esPassword,
 body .box .rodeaAddress form .esPostcode,
 body .box .rodeaAddress form .esRegion,
 body .box .rodeaAddress form .esRutEmpresa,
@@ -1201,9 +1167,11 @@ body .box .rodeaAddress form .esTelefono {
 body .box .rodeaAddress form .esAliasDireccion label,
 body .box .rodeaAddress form .esCelular label,
 body .box .rodeaAddress form .esCiudad label,
+body .box .rodeaAddress form .esCorreo label,
 body .box .rodeaAddress form .esDireccion label,
 body .box .rodeaAddress form .esDireccionDos label,
 body .box .rodeaAddress form .esPais label,
+body .box .rodeaAddress form .esPassword label,
 body .box .rodeaAddress form .esPostcode label,
 body .box .rodeaAddress form .esRegion label,
 body .box .rodeaAddress form .esRutEmpresa label,
@@ -1216,9 +1184,11 @@ body .box .rodeaAddress form .esTelefono label {
 body .box .rodeaAddress form .esAliasDireccion input,
 body .box .rodeaAddress form .esCelular input,
 body .box .rodeaAddress form .esCiudad input,
+body .box .rodeaAddress form .esCorreo input,
 body .box .rodeaAddress form .esDireccion input,
 body .box .rodeaAddress form .esDireccionDos input,
 body .box .rodeaAddress form .esPais input,
+body .box .rodeaAddress form .esPassword input,
 body .box .rodeaAddress form .esPostcode input,
 body .box .rodeaAddress form .esRegion input,
 body .box .rodeaAddress form .esRutEmpresa input,
@@ -4982,6 +4952,71 @@ td .sale-box {
   margin: 0 auto;
   padding: 18px;
   width: 70%;
+}
+.fechaNacimiento label {
+  color: #434142;
+  display: block;
+  font-weight: 600;
+  text-align: center;
+}
+.fechaNacimiento .contenedorFecha {
+  margin: 0 auto;
+  width: 70%;
+}
+.fechaNacimiento .contenedorFecha .selectorFecha {
+  display: inline-block;
+  text-align: center;
+  width: 32%;
+}
+.fechaNacimiento .contenedorFecha .selectorFecha .selector {
+  width: 100% !important;
+}
+.fechaNacimiento .contenedorFecha .selectorFecha .selector select {
+  background: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #999;
+  font-size: 13px;
+  height: 27px;
+  left: 0px;
+  outline: 0;
+  padding: 5px;
+  text-align: center;
+  top: 0px;
+  width: 100%;
+}
+.fechaNacimiento .contenedorFecha .selectorFecha .selector select option {
+  background: #fff;
+  color: #434142;
+}
+.fechaNacimiento .contenedorFecha .selectorFecha .selector span {
+  display: none;
+}
+.checkbox {
+  margin: 0 auto;
+  width: 70%;
+}
+.checkbox label {
+  font-size: 13px;
+  text-align: left;
+  width: 75%;
+}
+.checkbox label,
+.checkbox .checker {
+  display: inline-block;
+  vertical-align: top;
+}
+.checkbox label span input,
+.checkbox .checker span input {
+  height: 15px;
+  width: 15px;
+}
+.checkbox .checker {
+  text-align: right;
+}
+.checkboxArriba {
+  margin-top: 30px;
 }
 @-moz-keyframes anim-open {
   0% {
