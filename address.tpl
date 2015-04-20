@@ -108,7 +108,7 @@
 					<div class="esPostcode form-group">
 						<label for="postcode">{l s='Zip/Postal Code'}</label>
 						<!-- <input class="is_required validate form-control" data-validate="{$address_validation.$field_name.validate}" type="text" id="postcode" name="postcode" value="{if isset($smarty.post.postcode)}{$smarty.post.postcode}{else}{if isset($address->postcode)}{$address->postcode|escape:'html':'UTF-8'}{/if}{/if}" /> original abajo codigo con valor por defecto-->
-						<input class="is_required validate form-control" data-validate="{$address_validation.$field_name.validate}" type="text" id="postcode" name="postcode" value="2222222" />
+						<input class="is_required validate form-control" data-validate="{$address_validation.$field_name.validate}" type="text" id="postcode" name="postcode" value="222-2222" />
 					</div>
 				{/if}
 				{if $field_name eq 'city'}
