@@ -3591,13 +3591,60 @@ table
 
 
 .textoLink
+	background #fbfbfb
+	border 1px solid clarito
 	color oscuro
 	font-size 15px
-	text-align center
-	a
-		color oscuro
+	//padding 5px 
+	text-align left
+	width 50%
+	.row
+	.payment_module
+		display block
+		margin 0
+		width 100%
+	.payment_module
+		padding 1px 0
+		a
+			color oscuro
+			display block
+			line-height 50px
+			margin 0 1px
+			padding 15px
+			position relative
+			text-decoration none
+			&:hover
+				background naranjito
+				&:after
+				&:before
+					color oscuro
+			&:after
+				color naranjito
+				content '\e732'
+				font-family 'icos'
+				font-size 20px
+				position absolute
+				top 15px
+				right 5px
+			&:before
+				color naranjito
+				content 'ir a pagar'
+				font-family 'Open Sans', sans-serif
+				font-size 18px
+				font-weight 600
+				position absolute
+				text-transform uppercase
+				top 15px
+				right 30px
+			img
+				border none
+				vertical-align middle
+				margin-right 20px
+			span
+				display none
 		&:hover
-			color colorao
+			background clarito
+	
 
 .colorao
 	color colorao
@@ -4398,3 +4445,8 @@ td
 		text-align right
 .checkboxArriba
 	margin-top 30px
+	
+.alertClica
+	color #999
+	font-size 13px
+	margin 20px 0 

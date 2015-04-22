@@ -4135,15 +4135,68 @@ table tfoot tr td {
   margin: 18px auto;
 }
 .textoLink {
+  background: #fbfbfb;
+  border: 1px solid #ecedef;
   color: #434142;
   font-size: 15px;
-  text-align: center;
+  text-align: left;
+  width: 50%;
 }
-.textoLink a {
+.textoLink .row,
+.textoLink .payment_module {
+  display: block;
+  margin: 0;
+  width: 100%;
+}
+.textoLink .payment_module {
+  padding: 1px 0;
+}
+.textoLink .payment_module a {
+  color: #434142;
+  display: block;
+  line-height: 50px;
+  margin: 0 1px;
+  padding: 15px;
+  position: relative;
+  text-decoration: none;
+}
+.textoLink .payment_module a:hover {
+  background: #f8b302;
+}
+.textoLink .payment_module a:hover:after,
+.textoLink .payment_module a:hover:before {
   color: #434142;
 }
-.textoLink a:hover {
-  color: #f4714a;
+.textoLink .payment_module a:after {
+  color: #f8b302;
+  content: '\e732';
+  font-family: 'icos';
+  font-size: 20px;
+  position: absolute;
+  top: 15px;
+  right: 5px;
+}
+.textoLink .payment_module a:before {
+  color: #f8b302;
+  content: 'ir a pagar';
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  position: absolute;
+  text-transform: uppercase;
+  top: 15px;
+  right: 30px;
+}
+.textoLink .payment_module a img {
+  border: none;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+.textoLink .payment_module a span {
+  display: none;
+}
+.textoLink .payment_module:hover {
+  background: #ecedef;
 }
 .colorao {
   color: #f4714a;
@@ -5072,6 +5125,11 @@ td .sale-box {
 }
 .checkboxArriba {
   margin-top: 30px;
+}
+.alertClica {
+  color: #999;
+  font-size: 13px;
+  margin: 20px 0;
 }
 @-moz-keyframes anim-open {
   0% {

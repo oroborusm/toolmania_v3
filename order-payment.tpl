@@ -317,6 +317,7 @@
 							</div> <!-- end order-detail-content -->
 </div>
 						{/if}
+						<p class="alertClica">Haz click en la forma de pago</p>
 						{if $opc}<div id="opc_payment_methods-content">{/if}
 						<div id="HOOK_PAYMENT" class="textoLink">
 							{$HOOK_PAYMENT}
