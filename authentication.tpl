@@ -77,9 +77,9 @@
 						</div>
 					</form>
 				</div>
-				<!-- <div class="accedeCuenta">
+				<div class="accedeCuenta">
 					<form action="{$link->getPageLink('authentication', true)|escape:'html':'UTF-8'}" method="post" id="login_form" class="box">
-						<h3 class="page-subheading">{l s='Already registered?'}</h3>
+						<h1 class="page-subheading">{l s='Already registered?'}</h1>
 						<div class="form_content">
 							<div class="form-group">
 								<label for="email">{l s='Email address'}</label>
@@ -103,7 +103,7 @@
 							<p class="lost_password form-group"><a href="{$link->getPageLink('password')|escape:'html':'UTF-8'}" title="{l s='Recover your forgotten password'}" rel="nofollow">{l s='Forgot your password?'}</a></p>
 						</div>
 					</form>
-				</div> -->
+				</div>
 			</div>
 			{if isset($inOrderProcess) && $inOrderProcess && $PS_GUEST_CHECKOUT_ENABLED}
 				<form action="{$link->getPageLink('authentication', true, NULL, "back=$back")|escape:'html':'UTF-8'}" method="post" id="new_account_form" class="std clearfix">
