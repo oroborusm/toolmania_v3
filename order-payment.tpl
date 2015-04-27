@@ -169,9 +169,9 @@
 												</td>
 											</tr>
 										{else}
-										<tr class="cart_total_price">
+										<tr class="cart_total_price descuento">
 											{if $voucherAllowed}
-												<td colspan="2" id="cart_voucher" class="cart_voucher">
+												<td colspan="1" id="cart_voucher" class="cart_voucher">
 													<div id="cart_voucher" class="table_block">
 														{if isset($errors_discount) && $errors_discount}
 															<ul class="alert alert-danger">
@@ -184,17 +184,19 @@
 															<form action="{if $opc}{$link->getPageLink('order-opc', true)}{else}{$link->getPageLink('order', true)}{/if}" method="post" id="voucher">
 																<fieldset>
 																	<h4>{l s='Vouchers'}</h4>
-																	<input type="text" id="discount_name" class="form-control" name="discount_name" value="{if isset($discount_name) && $discount_name}{$discount_name}{/if}" />
-																	<input type="hidden" name="submitDiscount" />
-																	<button type="submit" name="submitAddDiscount" class="button btn btn-default button-small"><span>{l s='ok'}</span></button>
-																	{if $displayVouchers}
-																		<p id="title" class="title_offers">{l s='Take advantage of our offers:'}</p>
-																		<div id="display_cart_vouchers">
-																		{foreach from=$displayVouchers item=voucher}
-																			<span onclick="$('#discount_name').val('{$voucher.name}');return false;" class="voucher_name">{$voucher.name}</span> - {$voucher.description} <br />
-																		{/foreach}
-																		</div>
-																	{/if}
+																	<div class="contenedorInput">
+																		<input type="text" id="discount_name" class="form-control" name="discount_name" value="{if isset($discount_name) && $discount_name}{$discount_name}{/if}" />
+																		<input type="hidden" name="submitDiscount" />
+																		<button type="submit" name="submitAddDiscount" class="button btn btn-default button-small"><span>{l s='ok'}</span></button>
+																		{if $displayVouchers}
+																			<p id="title" class="title_offers">{l s='Take advantage of our offers:'}</p>
+																			<div id="display_cart_vouchers">
+																			{foreach from=$displayVouchers item=voucher}
+																				<span onclick="$('#discount_name').val('{$voucher.name}');return false;" class="voucher_name">{$voucher.name}</span> - {$voucher.description} <br />
+																			{/foreach}
+																			</div>
+																		{/if}								
+																	</div>
 																</fieldset>
 															</form>
 														{/if}
@@ -202,11 +204,11 @@
 												</td>
 											{/if}
 											<!-- <td colspan="{if !$voucherAllowed}3{else}2{/if}" class="text-right total_price_container"> -->
-											<td colspan="4" class="text-right total_price_container">
+											<td colspan="3" class="textoTotal">
 												<span>{l s='Total'}</span>
 											</td>
 											<!-- <td colspan="1" class="price total_price_container" id="total_price_container"> -->
-											<td colspan="2" class="price total_price_container" id="total_price_container">
+											<td colspan="2" class="precioTotal" id="total_price_container">
 												<span id="total_price">{displayPrice price=$total_price}</span>
 											</td>
 										</tr>

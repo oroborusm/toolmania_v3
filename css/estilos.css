@@ -2920,9 +2920,64 @@ table tbody tr .cart_quantity input {
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
+table tfoot tr {
+  text-align: right;
+}
 table tfoot tr td {
-  background: #ecedef;
-  border: 1px solid #aaa;
+  background: #fff;
+  border: none;
+  padding: 5px;
+}
+table tfoot tr .cart_voucher form {
+  background: edeef0;
+  border: 1px solid #ecedef;
+  padding: 5px;
+}
+table tfoot tr .cart_voucher form fieldset {
+  padding: 0;
+}
+table tfoot tr .cart_voucher form fieldset h4 {
+  color: #f4714a;
+  margin: 0 5px;
+  padding: 0;
+  text-transform: uppercase;
+}
+table tfoot tr .cart_voucher form fieldset h4,
+table tfoot tr .cart_voucher form fieldset .contenedorInput {
+  display: inline-block;
+}
+table tfoot tr .cart_voucher form fieldset .contenedorInput button {
+  background: #f4714a;
+  border: none;
+  height: 24px;
+  text-align: center;
+}
+table tfoot tr .cart_voucher form fieldset .contenedorInput button span {
+  color: #fff;
+  line-height: 24px;
+}
+table tfoot tr .cart_voucher,
+table tfoot tr .precioTotal,
+table tfoot tr .textoTotal {
+  background: #fff;
+  border: none;
+  margin: 0;
+}
+table tfoot tr .precioTotal {
+  border-bottom: 2px solid #f8b302;
+}
+table tfoot tr .precioTotal span {
+  color: #434142;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+table tfoot .cart_total_price .priceFinal {
+  border-bottom: 2px solid #f8b302;
+}
+table tfoot .cart_total_price .priceFinal span {
+  color: #434142;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 .active {
   display: block;
@@ -4135,21 +4190,21 @@ table tfoot tr td {
   margin: 18px auto;
 }
 .textoLink {
-  background: #fbfbfb;
-  border: 1px solid #ecedef;
   color: #434142;
   font-size: 15px;
   text-align: left;
-  width: 50%;
+  width: 100%;
 }
 .textoLink .row,
 .textoLink .payment_module {
-  display: block;
+  background: #fbfbfb;
+  display: inline-block;
   margin: 0;
-  width: 100%;
+  width: 49.5%;
 }
 .textoLink .payment_module {
-  padding: 1px 0;
+  border: 1px solid #ecedef;
+  margin: 0;
 }
 .textoLink .payment_module a {
   color: #434142;
@@ -4189,14 +4244,20 @@ table tfoot tr td {
 }
 .textoLink .payment_module a img {
   border: none;
-  vertical-align: middle;
+  height: 55px !important;
   margin-right: 20px;
+  vertical-align: middle;
+  width: 100px !important;
 }
 .textoLink .payment_module a span {
   display: none;
 }
 .textoLink .payment_module:hover {
   background: #ecedef;
+}
+.textoLink .row .payment_module {
+  border: 1px solid #ecedef;
+  width: 100%;
 }
 .colorao {
   color: #f4714a;

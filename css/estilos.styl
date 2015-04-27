@@ -2510,12 +2510,54 @@ table
 					border-radius 3px
 	tfoot
 		tr
+			text-align right
 			td
-				background clarito
-				border 1px solid #aaa
-
-
-
+				background white
+				border none
+				padding 5px
+			.cart_voucher
+				form
+					background edeef0
+					border 1px solid clarito
+					padding 5px
+					fieldset
+						padding 0
+						h4
+							color colorao
+							margin 0 5px
+							padding 0
+							text-transform uppercase
+						h4
+						.contenedorInput
+							display inline-block
+						.contenedorInput
+							button
+								background colorao
+								border none
+								height 24px
+								text-align center
+								span
+									color white
+									line-height 24px
+			.cart_voucher
+			.precioTotal
+			.textoTotal
+				background white
+				border none
+				margin 0
+			.precioTotal
+				border-bottom 2px solid naranjito
+				span
+					color oscuro
+					font-weight 600
+					text-transform uppercase
+		.cart_total_price
+			.priceFinal
+				border-bottom 2px solid naranjito
+				span
+					color oscuro
+					font-weight 600
+					text-transform uppercase
 .active
 	display block
 	
@@ -3591,20 +3633,20 @@ table
 
 
 .textoLink
-	background #fbfbfb
-	border 1px solid clarito
 	color oscuro
 	font-size 15px
 	//padding 5px 
 	text-align left
-	width 50%
+	width 100%
 	.row
 	.payment_module
-		display block
+		background #fbfbfb
+		display inline-block
 		margin 0
-		width 100%
+		width 49.5%
 	.payment_module
-		padding 1px 0
+		border 1px solid clarito
+		margin 0
 		a
 			color oscuro
 			display block
@@ -3638,13 +3680,18 @@ table
 				right 30px
 			img
 				border none
-				vertical-align middle
+				height 55px !important
 				margin-right 20px
+				vertical-align middle
+				width 100px !important
 			span
 				display none
 		&:hover
 			background clarito
-	
+	.row
+		.payment_module	
+			border 1px solid clarito
+			width 100%
 
 .colorao
 	color colorao
