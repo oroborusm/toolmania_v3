@@ -67,18 +67,18 @@
 										{if $use_taxes}
 											{if $priceDisplay}
 												<tr class="cart_total_price">
-													<td colspan="4" class="text-right">{if $display_tax_label}{l s='Total products (tax excl.)'}{else}{l s='Total products'}{/if}</td>
+													<td colspan="4" class="text-right conIva">{if $display_tax_label}{l s='Total products (tax excl.)'}{else}{l s='Total products'}{/if}</td>
 													<td colspan="2" class="price" id="total_product">{displayPrice price=$total_products}</td>
 												</tr>
 											{else}
 												<tr class="cart_total_price">
-													<td colspan="4" class="text-right">{if $display_tax_label}{l s='Total products (tax incl.)'}{else}{l s='Total products'}{/if}</td>
+													<td colspan="4" class="text-right conIva">{if $display_tax_label}{l s='Total products (tax incl.)'}{else}{l s='Total products'}{/if}</td>
 													<td colspan="2" class="price" id="total_product">{displayPrice price=$total_products_wt}</td>
 												</tr>
 											{/if}
 										{else}
 											<tr class="cart_total_price">
-												<td colspan="4" class="text-right">{l s='Total products'}</td>
+												<td colspan="4" class="text-right conIva">{l s='Total products'}</td>
 												<td colspan="2" class="price" id="total_product">{displayPrice price=$total_products}</td>
 											</tr>
 										{/if}
@@ -108,25 +108,25 @@
 										</tr>
 										{if $total_shipping_tax_exc <= 0 && !isset($virtualCart)}
 											<tr class="cart_total_delivery">
-												<td colspan="4" class="text-right">{l s='Shipping:'}</td>
+												<td colspan="4" class="text-right delivery">{l s='Shipping:'}</td>
 												<td colspan="2" class="price" id="total_shipping">{l s='Free Shipping!'}</td>
 											</tr>
 										{else}
 											{if $use_taxes && $total_shipping_tax_exc != $total_shipping}
 												{if $priceDisplay}
 													<tr class="cart_total_delivery" {if $shippingCost <= 0} style="display:none"{/if}>
-														<td colspan="4" class="text-right">{if $display_tax_label}{l s='Total shipping (tax excl.)'}{else}{l s='Total shipping'}{/if}</td>
+														<td colspan="4" class="text-right delivery">{if $display_tax_label}{l s='Total shipping (tax excl.)'}{else}{l s='Total shipping'}{/if}</td>
 														<td colspan="2" class="price" id="total_shipping">{displayPrice price=$shippingCostTaxExc}</td>
 													</tr>
 												{else}
 													<tr class="cart_total_delivery"{if $shippingCost <= 0} style="display:none"{/if}>
-														<td colspan="4" class="text-right">{if $display_tax_label}{l s='Total shipping (tax incl.)'}{else}{l s='Total shipping'}{/if}</td>
+														<td colspan="4" class="text-right delivery">{if $display_tax_label}{l s='Total shipping (tax incl.)'}{else}{l s='Total shipping'}{/if}</td>
 														<td colspan="2" class="price" id="total_shipping" >{displayPrice price=$shippingCost}</td>
 													</tr>
 												{/if}
 											{else}
 												<tr class="cart_total_delivery"{if $shippingCost <= 0} style="display:none"{/if}>
-													<td colspan="4" class="text-right">{l s='Total shipping'}</td>
+													<td colspan="4" class="text-right delivery">{l s='Total shipping'}</td>
 													<td colspan="2" class="price" id="total_shipping" >{displayPrice price=$shippingCostTaxExc}</td>
 												</tr>
 											{/if}
@@ -189,11 +189,13 @@
 																		<input type="hidden" name="submitDiscount" />
 																		<button type="submit" name="submitAddDiscount" class="button btn btn-default button-small"><span>{l s='ok'}</span></button>
 																		{if $displayVouchers}
-																			<p id="title" class="title_offers">{l s='Take advantage of our offers:'}</p>
-																			<div id="display_cart_vouchers">
-																			{foreach from=$displayVouchers item=voucher}
-																				<span onclick="$('#discount_name').val('{$voucher.name}');return false;" class="voucher_name">{$voucher.name}</span> - {$voucher.description} <br />
-																			{/foreach}
+																			<div class="infoVoucher">
+																				<p id="title" class="title_offers">{l s='Take advantage of our offers:'}</p>
+																				<div id="display_cart_vouchers">
+																				{foreach from=$displayVouchers item=voucher}
+																					<span onclick="$('#discount_name').val('{$voucher.name}');return false;" class="voucher_name">{$voucher.name}</span> - {$voucher.description} <br />
+																				{/foreach}
+																				</div>																				
 																			</div>
 																		{/if}								
 																	</div>
@@ -205,7 +207,7 @@
 											{/if}
 											<!-- <td colspan="{if !$voucherAllowed}3{else}2{/if}" class="text-right total_price_container"> -->
 											<td colspan="3" class="textoTotal">
-												<span>{l s='Total'}</span>
+												{l s='Total'}
 											</td>
 											<!-- <td colspan="1" class="price total_price_container" id="total_price_container"> -->
 											<td colspan="2" class="precioTotal" id="total_price_container">

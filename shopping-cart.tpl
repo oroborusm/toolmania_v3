@@ -208,7 +208,7 @@
 						</tr>
 					{/if}
 					
-					<tr{if $total_wrapping == 0} style="display: none;"{/if}>
+					<!-- <tr{if $total_wrapping == 0} style="display: none;"{/if}>
 						<td colspan="3" class="text-right">
 							{if $use_taxes}
 								{if $display_tax_label}{l s='Total gift wrapping (tax incl.):'}{else}{l s='Total gift-wrapping cost:'}{/if}
@@ -227,13 +227,30 @@
 								{displayPrice price=$total_wrapping_tax_exc}
 							{/if}
 						</td>
+					</tr> -->
+					<tr{if $total_wrapping == 0} style="display: none;"{/if}>
+						<td colspan="1" class="text-right">
+							{if $use_taxes}
+								{if $display_tax_label}{l s='Total gift wrapping (tax incl.):'}{else}{l s='Total gift-wrapping cost:'}{/if}
+							{else}
+								{l s='Total gift-wrapping cost:'}
+							{/if}
+							{if $use_taxes}
+								{if $priceDisplay}
+									{displayPrice price=$total_wrapping_tax_exc}
+								{else}
+									{displayPrice price=$total_wrapping}
+								{/if}
+							{else}
+								{displayPrice price=$total_wrapping_tax_exc}
+							{/if}
 					</tr>
 
 					<!-- transporte -->
 					{if $total_shipping_tax_exc <= 0 && !isset($virtualCart)}
 						<tr class="cart_total_delivery" style="{if !isset($carrier->id) || is_null($carrier->id)}display:none;{/if}">
 							<!-- <td colspan="{$col_span_subtotal}" class="text-right">{l s='Shipping'}</td> -->
-							<td colspan="4" class="text-right">{l s='Shipping'}</td>
+							<td colspan="4" class="text-right transporte">{l s='Shipping'}</td>
 							<td colspan="3" class="price" id="total_shipping">{l s='Free Shipping!'}</td>
 						</tr>
 					{else}
@@ -263,7 +280,8 @@
 						{/if}
 					{/if}
 					<tr class="cart_total_voucher" {if $total_discounts == 0}style="display:none"{/if}>
-						<td colspan="{$col_span_subtotal}" class="text-right">
+						<!-- <td colspan="{$col_span_subtotal}" class="text-right"> -->
+						<td colspan="1" class="text-right">
 							{if $display_tax_label}
 								{if $use_taxes && $priceDisplay == 0}
 									{l s='Total vouchers (tax incl.):'}
@@ -298,7 +316,7 @@
 					{/if}
 					<tr class="cart_total_price">
 						<!-- <td colspan="{$col_span_subtotal}" class="total_price_container text-right"> -->
-						<td colspan="4" class="total_price_container text-right">
+						<td colspan="4" class="total_price_container text-right textTotal">
 							<span>{l s='Total'}</span>
 						</td>
 						{if $use_taxes}

@@ -2464,12 +2464,16 @@ table
 			td
 				border 1px solid clarito
 				text-align center
+				a
+					img
+						height 130px
+						width 130px
 			.cart_avail
 				span
 					background colorao
 					color white
 					display block
-					line-height 105px
+					line-height 130px
 			.cart_delete
 				width 40px
 				div
@@ -2545,19 +2549,38 @@ table
 				background white
 				border none
 				margin 0
+			.conIva
+			.delivery
+			.textTotal
+			.textoTotal
+			.transporte
+				font-size 13px
 			.precioTotal
 				border-bottom 2px solid naranjito
 				span
-					color oscuro
+					color colorao
+					font-size 22px
 					font-weight 600
 					text-transform uppercase
+			.price
+				font-weight 600
 		.cart_total_price
 			.priceFinal
 				border-bottom 2px solid naranjito
 				span
-					color oscuro
+					color colorao
+					font-size 22px
 					font-weight 600
 					text-transform uppercase
+		.cart_total_voucher
+			text-align right
+			.price-discount
+				color colorao
+				font-weight 600
+				text-transform uppercase
+			.price-discount
+			.text-right
+				display inline-block
 .active
 	display block
 	
@@ -3640,16 +3663,17 @@ table
 	width 100%
 	.row
 	.payment_module
-		background #fbfbfb
 		display inline-block
 		margin 0
-		width 49.5%
+		width 48%
 	.payment_module
+		background #fbfbfb
 		border 1px solid clarito
-		margin 0
+		margin 0 1% 5px 1%
 		a
 			color oscuro
 			display block
+			//font-size 14px
 			line-height 50px
 			margin 0 1px
 			padding 15px
@@ -3666,7 +3690,7 @@ table
 				font-family 'icos'
 				font-size 20px
 				position absolute
-				top 15px
+				top 28px
 				right 5px
 			&:before
 				color naranjito
@@ -3676,14 +3700,14 @@ table
 				font-weight 600
 				position absolute
 				text-transform uppercase
-				top 15px
+				top 28px
 				right 30px
 			img
 				border none
-				height 55px !important
-				margin-right 20px
+				height 80px !important
+				margin-right 15px
 				vertical-align middle
-				width 100px !important
+				width 150px !important
 			span
 				display none
 		&:hover

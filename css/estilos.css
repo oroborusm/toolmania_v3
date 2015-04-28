@@ -2870,11 +2870,15 @@ table tbody tr td {
   border: 1px solid #ecedef;
   text-align: center;
 }
+table tbody tr td a img {
+  height: 130px;
+  width: 130px;
+}
 table tbody tr .cart_avail span {
   background: #f4714a;
   color: #fff;
   display: block;
-  line-height: 105px;
+  line-height: 130px;
 }
 table tbody tr .cart_delete {
   width: 40px;
@@ -2963,21 +2967,45 @@ table tfoot tr .textoTotal {
   border: none;
   margin: 0;
 }
+table tfoot tr .conIva,
+table tfoot tr .delivery,
+table tfoot tr .textTotal,
+table tfoot tr .textoTotal,
+table tfoot tr .transporte {
+  font-size: 13px;
+}
 table tfoot tr .precioTotal {
   border-bottom: 2px solid #f8b302;
 }
 table tfoot tr .precioTotal span {
-  color: #434142;
+  color: #f4714a;
+  font-size: 22px;
   font-weight: 600;
   text-transform: uppercase;
+}
+table tfoot tr .price {
+  font-weight: 600;
 }
 table tfoot .cart_total_price .priceFinal {
   border-bottom: 2px solid #f8b302;
 }
 table tfoot .cart_total_price .priceFinal span {
-  color: #434142;
+  color: #f4714a;
+  font-size: 22px;
   font-weight: 600;
   text-transform: uppercase;
+}
+table tfoot .cart_total_voucher {
+  text-align: right;
+}
+table tfoot .cart_total_voucher .price-discount {
+  color: #f4714a;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+table tfoot .cart_total_voucher .price-discount,
+table tfoot .cart_total_voucher .text-right {
+  display: inline-block;
 }
 .active {
   display: block;
@@ -4197,14 +4225,14 @@ table tfoot .cart_total_price .priceFinal span {
 }
 .textoLink .row,
 .textoLink .payment_module {
-  background: #fbfbfb;
   display: inline-block;
   margin: 0;
-  width: 49.5%;
+  width: 48%;
 }
 .textoLink .payment_module {
+  background: #fbfbfb;
   border: 1px solid #ecedef;
-  margin: 0;
+  margin: 0 1% 5px 1%;
 }
 .textoLink .payment_module a {
   color: #434142;
@@ -4228,7 +4256,7 @@ table tfoot .cart_total_price .priceFinal span {
   font-family: 'icos';
   font-size: 20px;
   position: absolute;
-  top: 15px;
+  top: 28px;
   right: 5px;
 }
 .textoLink .payment_module a:before {
@@ -4239,15 +4267,15 @@ table tfoot .cart_total_price .priceFinal span {
   font-weight: 600;
   position: absolute;
   text-transform: uppercase;
-  top: 15px;
+  top: 28px;
   right: 30px;
 }
 .textoLink .payment_module a img {
   border: none;
-  height: 55px !important;
-  margin-right: 20px;
+  height: 80px !important;
+  margin-right: 15px;
   vertical-align: middle;
-  width: 100px !important;
+  width: 150px !important;
 }
 .textoLink .payment_module a span {
   display: none;
