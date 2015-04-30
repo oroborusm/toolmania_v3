@@ -258,24 +258,24 @@
 							{if $priceDisplay}
 								<tr class="cart_total_delivery" {if $total_shipping_tax_exc <= 0} style="display:none;"{/if}>
 									<!-- <td colspan="{$col_span_subtotal}" class="text-right"> -->
-									<td colspan="{$col_span_subtotal}" class="text-right">
+									<td colspan="4" class="text-right">
 										{if $display_tax_label}{l s='Total shipping (tax excl.)'}{else}{l s='Total shipping'}{/if}</td>
-									<td colspan="2" class="price" id="total_shipping">{displayPrice price=$total_shipping_tax_exc}</td>
+									<td colspan="3" class="price" id="total_shipping">{displayPrice price=$total_shipping_tax_exc}</td>
 								</tr>
 							{else}
 								<tr class="cart_total_delivery"{if $total_shipping <= 0} style="display:none;"{/if}>
 									<!-- <td colspan="{$col_span_subtotal}" class="text-right"> -->
-									<td colspan="{$col_span_subtotal}" class="text-right">
+									<td colspan="4" class="text-right">
 										{if $display_tax_label}{l s='Total shipping (tax incl.)'}{else}{l s='Total shipping'}{/if}</td>
-									<td colspan="2" class="price" id="total_shipping" >{displayPrice price=$total_shipping}</td>
+									<td colspan="3" class="price" id="total_shipping" >{displayPrice price=$total_shipping}</td>
 								</tr>
 							{/if}
 						{else}
 							<tr class="cart_total_delivery"{if $total_shipping_tax_exc <= 0} style="display:none;"{/if}>
 								<!-- <td colspan="{$col_span_subtotal}" class="text-right"> -->
-								<td colspan="{$col_span_subtotal}" class="text-right">
+								<td colspan="4" class="text-right">
 									{l s='Total shipping'}</td>
-								<td colspan="2" class="price" id="total_shipping" >{displayPrice price=$total_shipping_tax_exc}</td>
+								<td colspan="3" class="price" id="total_shipping" >{displayPrice price=$total_shipping_tax_exc}</td>
 							</tr>
 						{/if}
 					{/if}
